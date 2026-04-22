@@ -1,0 +1,70 @@
+[
+  {
+    "student_id": "STU-2026-0001",
+    "term": "Term 1",
+    "year": "2026",
+    "results": [
+      {
+        "subject": "Mathematics",
+        "score": 88,
+        "grade": "EE2",
+        "remarks": "Excellent"
+      },
+      {
+        "subject": "English",
+        "score": 74,
+        "grade": "ME1",
+        "remarks": "Good progress"
+      },
+      {
+        "subject": "Science",
+        "score": 91,
+        "grade": "EE1",
+        "remarks": "Top of class"
+      },
+      {
+        "subject": "Social Studies",
+        "score": 68,
+        "grade": "ME1",
+        "remarks": "Needs more effort"
+      }
+    ],
+    "total_marks": 321,
+    "average": 80.25,
+    "position": 5
+  },
+  {
+    "student_id": "STU-2026-0002",
+    "term": "Term 1",
+    "year": "2026",
+    "results": [
+      {
+        "subject": "Mathematics",
+        "score": 95,
+        "grade": "EE1",
+        "remarks": "Outstanding"
+      },
+      {
+        "subject": "English",
+        "score": 82,
+        "grade": "EE2",
+        "remarks": "Very strong"
+      },
+      {
+        "subject": "Science",
+        "score": 88,
+        "grade": "EE2",
+        "remarks": "Consistent"
+      },
+      {
+        "subject": "Social Studies",
+        "score": 90,
+        "grade": "EE1",
+        "remarks": "Excellent"
+      }
+    ],
+    "total_marks": 355,
+    "average": 88.75,
+    "position": 1
+  }
+]

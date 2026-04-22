@@ -1,0 +1,26 @@
+[
+  {
+    "username": "John",
+    "access_key": "12345678",
+    "student_id": "STU-2026-0001",
+    "student_name": "Jane Doe"
+  },
+  {
+    "username": "Mary",
+    "access_key": "87654321",
+    "student_id": "STU-2026-0002",
+    "student_name": "Samuel Maina"
+  },
+  {
+    "username": "David",
+    "access_key": "11223344",
+    "student_id": "STU-2026-0003",
+    "student_name": "Grace Omari"
+  },
+  {
+    "username": "Sarah",
+    "access_key": "55667788",
+    "student_id": "STU-2026-0004",
+    "student_name": "Brian Kipkorir"
+  }
+]
