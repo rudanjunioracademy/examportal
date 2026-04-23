@@ -1,0 +1,17 @@
+# Ignore local master database (SENSITIVE)
+student.json
+local_students_master.json
+
+# Ignore generated PDFs (Keep these local for printing)
+reports/
+*.pdf
+
+# Ignore Python environment and cache
+__pycache__/
+*.pyc
+.env
+venv/
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
