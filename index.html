@@ -3,185 +3,197 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RJA | Student Performance Portal</title>
+    <title>Rudan Junior Academy | Results Portal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        :root { --primary: #28a745; --dark: #333; --light: #f4f4f9; }
-
-        /* Animated Green Gradient Background */
-        body { 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            margin: 0;
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            min-height: 100vh;
-            background: linear-gradient(-45deg, #1e7e34, #28a745, #a2d9a1, #ffffff);
+        /* Animated Green Background */
+        body {
+            background: linear-gradient(-45deg, #064e3b, #059669, #10b981, #134e4a);
             background-size: 400% 400%;
-            animation: gradientBG 15s ease infinite;
-            overflow-x: hidden;
+            animation: gradient 15s ease infinite;
+            min-height: 100vh;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            padding: 40px 20px;
         }
 
-        @keyframes gradientBG {
+        @keyframes gradient {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
         }
 
-        /* Floating Background Elements */
-        body::before {
-            content: "";
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: url('https://www.transparenttextures.com/patterns/cubes.png');
-            opacity: 0.1;
-            z-index: -1;
+        .main-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 24px;
+            border: none;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            overflow: hidden;
         }
 
-        .card { 
-            background: rgba(255, 255, 255, 0.95); 
-            padding: 2.5rem; 
-            border-radius: 16px; 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15); 
-            width: 90%; 
-            max-width: 450px; 
+        .header-accent {
+            background: #059669;
+            color: white;
+            padding: 30px;
             text-align: center;
-            backdrop-filter: blur(5px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            z-index: 1;
         }
-        
-        .school-logo { height: 90px; width: auto; margin-bottom: 15px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1)); }
-        .logo-area h2 { color: var(--dark); margin: 0 0 0.5rem 0; font-size: 1.8rem; }
-        .logo-area p { color: #555; font-size: 0.95rem; margin-bottom: 1.8rem; font-weight: 500; }
-        
-        input { 
-            width: 100%; padding: 14px; margin: 10px 0; 
-            border: 1px solid #ddd; border-radius: 8px; 
-            box-sizing: border-box; font-size: 1rem;
-            transition: border-color 0.3s;
-        }
-        input:focus { border-color: var(--primary); outline: none; box-shadow: 0 0 5px rgba(40, 167, 69, 0.3); }
 
-        button { 
-            width: 100%; padding: 14px; 
-            background: var(--primary); color: white; 
-            border: none; border-radius: 8px; 
-            cursor: pointer; font-size: 1.1rem; font-weight: bold; 
-            transition: transform 0.2s, background 0.3s;
-            margin-top: 10px;
+        .search-box {
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 15px;
+            font-size: 1.1rem;
+            transition: all 0.3s;
         }
-        button:hover { background: #218838; transform: translateY(-2px); }
-        button:active { transform: translateY(0); }
-        
-        #results { margin-top: 25px; display: none; text-align: left; animation: fadeIn 0.6s ease-out; }
-        .result-item { 
-            background: white; padding: 12px; 
-            border-left: 5px solid var(--primary); 
-            margin-bottom: 10px; border-radius: 6px; 
-            display: flex; justify-content: space-between;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+
+        .search-box:focus {
+            border-color: #10b981;
+            box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.1);
+            outline: none;
         }
-        .subject-name { font-weight: bold; color: var(--dark); }
-        .score-box { color: var(--primary); font-weight: bold; }
-        
-        .summary-footer { 
-            margin-top: 20px; padding: 15px; 
-            background: #e9f7ec; border-radius: 8px; 
-            font-weight: bold; color: #1e7e34; text-align: center;
-            border: 1px solid #c3e6cb;
+
+        .grade-pill {
+            padding: 6px 12px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.8rem;
+            text-transform: uppercase;
         }
-        
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* CBC Specific Colors */
+        .ee { background: #dcfce7; color: #166534; } /* Exceeding Expectations */
+        .me { background: #dcf0fc; color: #0369a1; } /* Meeting Expectations */
+        .ae { background: #fef9c3; color: #854d0e; } /* Approaching Expectations */
+        .be { background: #fee2e2; color: #991b1b; } /* Below Expectations */
+
+        #resultsTable { display: none; }
     </style>
 </head>
 <body>
 
-    <div class="card">
-        <div class="logo-area">
-            <img src="logo.png" alt="RJA Logo" class="school-logo" onerror="this.style.display='none'">
-            <h2>Rudan Junior Academy</h2>
-            <p>Parent Performance Portal</p>
-        </div>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card main-card">
+                <div class="header-accent">
+                    <h2 class="fw-bold mb-1">Rudan Junior Academy</h2>
+                    <p class="mb-0 opacity-75">Student Assessment Results</p>
+                </div>
+                
+                <div class="card-body p-4 p-md-5">
+                    <div class="text-center mb-4">
+                        <p class="text-muted">Enter your Admission Number to view your latest CBC performance records.</p>
+                        <div class="input-group mb-3">
+                            <input type="text" id="admInput" class="form-control search-box" placeholder="e.g. R001" autocomplete="off">
+                            <button class="btn btn-success px-4 fw-bold shadow-sm" onclick="search()">Find Results</button>
+                        </div>
+                        <div id="loader" class="text-muted small mt-2">Connecting to secure data...</div>
+                    </div>
 
-        <input type="text" id="parentName" placeholder="Parent First Name">
-        <input type="password" id="nationalID" placeholder="National ID (Password)">
-        <button onclick="checkAccess()" id="loginBtn">View Results</button>
+                    <div id="resultsTable">
+                        <hr class="my-4">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h5 class="fw-bold text-success" id="studentName"></h5>
+                            <span class="badge bg-light text-dark border" id="studentAdm"></span>
+                        </div>
+                        
+                        <div class="table-responsive">
+                            <table class="table align-middle">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>Learning Area</th>
+                                        <th>Score</th>
+                                        <th>CBC Grade</th>
+                                        <th>Term</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tableBody">
+                                    </tbody>
+                            </table>
+                        </div>
+                    </div>
 
-        <div id="results">
-            <h3 id="displayName" style="color: var(--dark); border-bottom: 2px solid #eee; padding-bottom: 10px; margin-top: 0;"></h3>
-            <div id="performanceTable"></div>
-            <p style="font-size: 0.75rem; color: #888; margin-top: 20px; text-align: center; font-style: italic;">
-                Official CBC Electronic Result Slip
-            </p>
+                    <div id="noResults" class="text-center py-5" style="display: none;">
+                        <h5 class="text-muted">No records found for that Admission Number.</h5>
+                        <p class="small text-muted">Please contact the school administration if you think this is an error.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <footer class="text-center mt-4 text-white-50">
+                <small>&copy; 2026 Rudan Junior Academy Exam Portal</small>
+            </footer>
         </div>
     </div>
+</div>
 
-    <script>
-        async function checkAccess() {
-            const nameInput = document.getElementById('parentName').value.trim();
-            const idInput = document.getElementById('nationalID').value.trim();
-            const btn = document.getElementById('loginBtn');
+<script>
+    let resultsData = [];
+
+    // Initialize System and Load JSON
+    async function init() {
+        const loader = document.getElementById('loader');
+        try {
+            const response = await fetch('results.json');
+            if (!response.ok) throw new Error("File not found");
             
-            if(!nameInput || !idInput) {
-                alert("Please fill in both fields.");
-                return;
-            }
-
-            btn.innerText = "Verifying Credentials...";
-            btn.disabled = true;
-
-            try {
-                const parentsRes = await fetch('./parents.json');
-                const parents = await parentsRes.json();
-                
-                const resultsRes = await fetch('./results.json');
-                const resultsData = await resultsRes.json();
-
-                const user = parents.find(p => 
-                    p.username.toLowerCase() === nameInput.toLowerCase() && 
-                    p.access_key === idInput
-                );
-
-                if (user) {
-                    const studentResults = resultsData.find(r => r.student_id === user.student_id);
-                    
-                    document.getElementById('displayName').innerText = "Student: " + user.student_name;
-                    let html = '';
-                    
-                    if (studentResults && studentResults.results) {
-                        studentResults.results.forEach(res => {
-                            html += `
-                                <div class="result-item">
-                                    <span class="subject-name">${res.subject}</span>
-                                    <span class="score-box">${res.score}% (${res.grade})</span>
-                                </div>`;
-                        });
-                        
-                        html += `
-                            <div class="summary-footer">
-                                Average: ${studentResults.average}% | Position: ${studentResults.position}
-                            </div>`;
-                    } else {
-                        html = '<p style="text-align:center; color:#888;">No marks found for the current term.</p>';
-                    }
-
-                    document.getElementById('performanceTable').innerHTML = html;
-                    document.getElementById('results').style.display = 'block';
-                    // Scroll to results on mobile
-                    setTimeout(() => {
-                        document.getElementById('results').scrollIntoView({ behavior: 'smooth' });
-                    }, 100);
-                } else {
-                    alert("Access Denied: The name or ID provided does not match our records.");
-                }
-            } catch (error) {
-                console.error("Fetch Error:", error);
-                alert("Connection Error: Could not reach the portal database.");
-            } finally {
-                btn.innerText = "View Results";
-                btn.disabled = false;
-            }
+            resultsData = await response.json();
+            
+            // Filter out any entries that aren't objects to prevent errors
+            resultsData = resultsData.filter(item => item !== null && typeof item === 'object');
+            
+            loader.innerHTML = '<span class="text-success">● System Online</span>';
+        } catch (e) {
+            console.error("Initialization error:", e);
+            loader.innerHTML = '<span class="text-danger">● System Offline - Contact Admin</span>';
         }
-    </script>
+    }
+
+    function search() {
+        const input = document.getElementById('admInput').value.trim().toUpperCase();
+        const table = document.getElementById('resultsTable');
+        const noResults = document.getElementById('noResults');
+        const body = document.getElementById('tableBody');
+        
+        if (!input) return;
+
+        // Perform search
+        const filtered = resultsData.filter(r => 
+            r.adm_no && r.adm_no.toUpperCase() === input
+        );
+
+        if (filtered.length > 0) {
+            noResults.style.display = 'none';
+            table.style.display = 'block';
+            
+            document.getElementById('studentName').innerText = filtered[0].student_name;
+            document.getElementById('studentAdm').innerText = filtered[0].adm_no;
+
+            body.innerHTML = filtered.map(item => `
+                <tr>
+                    <td class="fw-bold">${item.subject || 'N/A'}</td>
+                    <td>${item.score}%</td>
+                    <td>
+                        <span class="grade-pill ${(item.grade || 'be').toLowerCase()}">
+                            ${item.grade || 'Below'}
+                        </span>
+                    </td>
+                    <td>${item.term} ${item.year || '2026'}</td>
+                </tr>
+            `).join('');
+        } else {
+            table.style.display = 'none';
+            noResults.style.display = 'block';
+        }
+    }
+
+    // Event Listeners
+    document.getElementById('admInput').addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') search();
+    });
+
+    init();
+</script>
+
 </body>
 </html>
