@@ -1,70 +1,123 @@
-[
-  {
-    "student_id": "STU-2026-0001",
-    "term": "Term 1",
-    "year": "2026",
-    "results": [
-      {
+{
+    "0": {
+        "student_id": 2,
+        "class_id": 12,
+        "term": "Term 1",
+        "exam_type": "Opener Exam",
+        "year": 2026,
         "subject": "Mathematics",
-        "score": 88,
-        "grade": "EE2",
-        "remarks": "Excellent"
-      },
-      {
+        "score": 100,
+        "timestamp": "2026-04-26 12:58:01"
+    },
+    "1": {
+        "student_id": 2,
+        "class_id": 12,
+        "term": "Term 1",
+        "exam_type": "Opener Exam",
+        "year": 2026,
         "subject": "English",
-        "score": 74,
-        "grade": "ME1",
-        "remarks": "Good progress"
-      },
-      {
-        "subject": "Science",
-        "score": 91,
-        "grade": "EE1",
-        "remarks": "Top of class"
-      },
-      {
-        "subject": "Social Studies",
-        "score": 68,
-        "grade": "ME1",
-        "remarks": "Needs more effort"
-      }
-    ],
-    "total_marks": 321,
-    "average": 80.25,
-    "position": 5
-  },
-  {
-    "student_id": "STU-2026-0002",
-    "term": "Term 1",
-    "year": "2026",
-    "results": [
-      {
-        "subject": "Mathematics",
-        "score": 95,
-        "grade": "EE1",
-        "remarks": "Outstanding"
-      },
-      {
-        "subject": "English",
-        "score": 82,
-        "grade": "EE2",
-        "remarks": "Very strong"
-      },
-      {
-        "subject": "Science",
+        "score": 100,
+        "timestamp": "2026-04-26 12:58:01"
+    },
+    "2": {
+        "student_id": 2,
+        "class_id": 12,
+        "term": "Term 1",
+        "exam_type": "Opener Exam",
+        "year": 2026,
+        "subject": "Kiswahili",
+        "score": 77,
+        "timestamp": "2026-04-26 12:58:01"
+    },
+    "3": {
+        "student_id": 2,
+        "class_id": 12,
+        "term": "Term 1",
+        "exam_type": "Opener Exam",
+        "year": 2026,
+        "subject": "Science & Technology",
         "score": 88,
-        "grade": "EE2",
-        "remarks": "Consistent"
-      },
-      {
+        "timestamp": "2026-04-26 12:58:01"
+    },
+    "4": {
+        "student_id": 2,
+        "class_id": 12,
+        "term": "Term 1",
+        "exam_type": "Opener Exam",
+        "year": 2026,
         "subject": "Social Studies",
-        "score": 90,
-        "grade": "EE1",
-        "remarks": "Excellent"
-      }
-    ],
-    "total_marks": 355,
-    "average": 88.75,
-    "position": 1
-  }
-]
+        "score": 89,
+        "timestamp": "2026-04-26 12:58:01"
+    },
+    "5": {
+        "student_id": 2,
+        "class_id": 12,
+        "term": "Term 1",
+        "exam_type": "Opener Exam",
+        "year": 2026,
+        "subject": "Computer Studies",
+        "score": 49,
+        "timestamp": "2026-04-26 12:58:01"
+    },
+    "6": {
+        "student_id": 2,
+        "class_id": 12,
+        "term": "Term 1",
+        "exam_type": "Opener Exam",
+        "year": 2026,
+        "subject": "French",
+        "score": 56,
+        "timestamp": "2026-04-26 12:58:01"
+    },
+    "7": {
+        "student_id": 2,
+        "class_id": 12,
+        "term": "Term 1",
+        "exam_type": "Opener Exam",
+        "year": 2026,
+        "subject": "Music",
+        "score": 89,
+        "timestamp": "2026-04-26 12:58:01"
+    },
+    "8": {
+        "student_id": 2,
+        "class_id": 12,
+        "term": "Term 1",
+        "exam_type": "Opener Exam",
+        "year": 2026,
+        "subject": "CAS",
+        "score": 57,
+        "timestamp": "2026-04-26 12:58:01"
+    },
+    "9": {
+        "student_id": 2,
+        "class_id": 12,
+        "term": "Term 1",
+        "exam_type": "Opener Exam",
+        "year": 2026,
+        "subject": "Pre-Tech",
+        "score": 56,
+        "timestamp": "2026-04-26 12:58:01"
+    },
+    "10": {
+        "student_id": 2,
+        "class_id": 12,
+        "term": "Term 1",
+        "exam_type": "Opener Exam",
+        "year": 2026,
+        "subject": "Religious Education",
+        "score": 56,
+        "timestamp": "2026-04-26 12:58:01"
+    },
+    "11": {
+        "student_id": 2,
+        "class_id": 12,
+        "term": "Term 1",
+        "exam_type": "Opener Exam",
+        "year": 2026,
+        "subject": "Agriculture ",
+        "score": 45,
+        "timestamp": "2026-04-26 12:58:01"
+    },
+    "last_sync": "2026-04-26 17:15:34"
+}
