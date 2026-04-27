@@ -1,43 +1,13 @@
-{
-    "0": {
-        "student_id": 3,
-        "class_id": 1,
-        "term": "Term 1",
-        "exam_type": "End Term Exam",
-        "year": 2026,
-        "subject": "Language Activity",
-        "score": 100,
-        "timestamp": "2026-04-27 10:51:54"
-    },
-    "1": {
-        "student_id": 3,
-        "class_id": 1,
-        "term": "Term 1",
-        "exam_type": "End Term Exam",
-        "year": 2026,
-        "subject": "Mathematics Activity",
-        "score": 100,
-        "timestamp": "2026-04-27 10:51:54"
-    },
-    "2": {
-        "student_id": 3,
-        "class_id": 1,
-        "term": "Term 1",
-        "exam_type": "End Term Exam",
-        "year": 2026,
-        "subject": "Religious Activity",
-        "score": 100,
-        "timestamp": "2026-04-27 10:51:54"
-    },
-    "3": {
-        "student_id": 3,
-        "class_id": 1,
-        "term": "Term 1",
-        "exam_type": "End Term Exam",
-        "year": 2026,
-        "subject": "Creative Activity",
-        "score": 100,
-        "timestamp": "2026-04-27 10:51:54"
-    },
-    "last_sync": "2026-04-27 13:52:05"
-}
+[
+  {
+    "adm_no": "RJA/001/2026",
+    "student_name": "Derrick Ohato",
+    "current_class": "Grade 4 East",
+    "subject": "Mathematics",
+    "score": 88,
+    "grade": "EE",
+    "term": "Term 1",
+    "year": "2026",
+    "exam_type": "Mid-Term"
+  }
+]
