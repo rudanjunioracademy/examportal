@@ -16,6 +16,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            padding: 20px;
         }
 
         @keyframes gradient {
@@ -27,45 +28,70 @@
         .login-card {
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
-            border-radius: 24px;
+            border-radius: 16px;
             width: 100%;
-            max-width: 500px;
-            box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+            max-width: 400px; /* Reduced width for compactness */
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
             overflow: hidden;
+        }
+
+        .logo-container {
+            padding-top: 20px;
+            text-align: center;
+            background: white;
+        }
+
+        .school-logo {
+            width: 80px; /* Standard logo size */
+            height: auto;
+            margin-bottom: 10px;
         }
 
         .header-accent {
             background: #059669;
             color: white;
-            padding: 40px 20px;
+            padding: 20px 15px; /* Reduced padding */
             text-align: center;
+        }
+
+        .header-accent h2 {
+            font-size: 1.4rem; /* Smaller heading */
+        }
+
+        .header-accent p {
+            font-size: 0.85rem;
         }
 
         .search-box {
             border: 2px solid #e2e8f0;
-            border-radius: 12px;
-            padding: 15px;
-            font-size: 1.1rem;
+            border-radius: 8px;
+            padding: 10px;
+            font-size: 0.95rem; /* Standard font size */
             transition: all 0.3s;
         }
 
         .search-box:focus {
             border-color: #10b981;
-            box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.1);
+            box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
         }
 
         /* CBC Grade Badges */
         .grade-pill {
-            padding: 4px 12px;
+            padding: 3px 10px;
             border-radius: 50px;
             font-weight: 700;
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             text-transform: uppercase;
         }
         .ee { background: #dcfce7; color: #166534; }
         .me { background: #dcf0fc; color: #0369a1; }
         .ae { background: #fef9c3; color: #854d0e; }
         .be { background: #fee2e2; color: #991b1b; }
+
+        .btn-access {
+            padding: 10px;
+            font-size: 0.95rem;
+        }
 
         @media print {
             .modal-header, .modal-footer, .d-print-none { display: none !important; }
@@ -76,21 +102,25 @@
 <body>
 
 <div class="login-card p-0">
+    <div class="logo-container">
+        <img src="logo.png" alt="Rudan Junior Academy" class="school-logo" onerror="this.src='https://via.placeholder.com/80?text=LOGO'">
+    </div>
+
     <div class="header-accent">
-        <h2 class="fw-bold mb-1">Rudan Junior Academy</h2>
-        <p class="mb-0 opacity-75">Student Results Portal</p>
+        <h2 class="fw-bold mb-0">Rudan Junior Academy</h2>
+        <p class="mb-0 opacity-75">Results Portal</p>
     </div>
     
-    <div class="card-body p-4 p-md-5 text-center">
-        <p class="text-muted mb-4">Enter Admission Number to view termly performance.</p>
+    <div class="card-body p-4 text-center">
+        <p class="text-muted small mb-3">Enter Admission Number to access report.</p>
         
         <input type="text" id="admInput" class="form-control search-box mb-3 text-center" placeholder="e.g. RJA/001/2026" autocomplete="off">
         
-        <button class="btn btn-success w-100 py-3 fw-bold shadow-sm" onclick="search()">
+        <button class="btn btn-success w-100 btn-access fw-bold shadow-sm" onclick="search()">
             <i class="fas fa-search me-2"></i>Access Results
         </button>
 
-        <div id="loader" class="small mt-3 text-muted">
+        <div id="loader" class="smaller mt-3 text-muted" style="font-size: 0.75rem;">
             <i class="fas fa-circle-notch fa-spin me-1"></i> System Online
         </div>
     </div>
@@ -98,62 +128,62 @@
 
 <div class="modal fade" id="resultsModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content border-0 shadow-lg" style="border-radius: 20px;">
-            <div class="modal-header bg-light border-0 px-4 py-3">
-                <h5 class="modal-title fw-bold text-success"><i class="fas fa-graduation-cap me-2"></i>Performance Report</h5>
+        <div class="modal-content border-0 shadow-lg" style="border-radius: 12px;">
+            <div class="modal-header bg-light border-0 px-4 py-2">
+                <h6 class="modal-title fw-bold text-success"><i class="fas fa-graduation-cap me-2"></i>Performance Report</h6>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body p-4" id="printArea">
-                <div class="row mb-4">
+                <div class="row mb-3">
                     <div class="col-sm-6">
-                        <label class="text-muted small text-uppercase fw-bold">Student Name</label>
-                        <h4 class="fw-bold text-dark" id="mStudentName"></h4>
+                        <label class="text-muted small text-uppercase fw-bold" style="font-size: 10px;">Student Name</label>
+                        <h5 class="fw-bold text-dark mb-0" id="mStudentName"></h5>
                     </div>
                     <div class="col-sm-6 text-sm-end">
-                        <label class="text-muted small text-uppercase fw-bold">Admission No</label>
-                        <h4 class="fw-bold text-muted" id="mStudentAdm"></h4>
+                        <label class="text-muted small text-uppercase fw-bold" style="font-size: 10px;">Admission No</label>
+                        <h5 class="fw-bold text-muted mb-0" id="mStudentAdm"></h5>
                     </div>
                 </div>
 
-                <div class="row mb-4">
-                    <div class="col-sm-4">
-                        <div class="p-3 bg-light rounded-3">
-                            <small class="text-muted d-block text-uppercase fw-bold" style="font-size: 10px;">Current Class</small>
-                            <span class="fw-bold text-dark" id="mStudentClass">---</span>
+                <div class="row mb-3">
+                    <div class="col-4">
+                        <div class="p-2 bg-light rounded text-center">
+                            <small class="text-muted d-block text-uppercase fw-bold" style="font-size: 9px;">Class</small>
+                            <span class="small fw-bold text-dark" id="mStudentClass">---</span>
                         </div>
                     </div>
-                    <div class="col-sm-4">
-                        <div class="p-3 bg-light rounded-3">
-                            <small class="text-muted d-block text-uppercase fw-bold" style="font-size: 10px;">Term / Year</small>
-                            <span class="fw-bold text-dark" id="mStudentTerm">---</span>
+                    <div class="col-4">
+                        <div class="p-2 bg-light rounded text-center">
+                            <small class="text-muted d-block text-uppercase fw-bold" style="font-size: 9px;">Term</small>
+                            <span class="small fw-bold text-dark" id="mStudentTerm">---</span>
                         </div>
                     </div>
-                    <div class="col-sm-4">
-                        <div class="p-3 bg-light rounded-3">
-                            <small class="text-muted d-block text-uppercase fw-bold" style="font-size: 10px;">Exam Type</small>
-                            <span class="fw-bold text-dark" id="mExamType">---</span>
+                    <div class="col-4">
+                        <div class="p-2 bg-light rounded text-center">
+                            <small class="text-muted d-block text-uppercase fw-bold" style="font-size: 9px;">Exam</small>
+                            <span class="small fw-bold text-dark" id="mExamType">---</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="table-responsive">
-                    <table class="table table-hover align-middle">
+                    <table class="table table-sm table-hover align-middle" style="font-size: 0.9rem;">
                         <thead class="table-light">
                             <tr>
                                 <th>Learning Area</th>
                                 <th class="text-center">Score</th>
-                                <th class="text-center">CBC Grade</th>
+                                <th class="text-center">Grade</th>
                             </tr>
                         </thead>
                         <tbody id="tableBody"></tbody>
                     </table>
                 </div>
             </div>
-            <div class="modal-footer border-0 px-4 pb-4">
-                <button onclick="window.print()" class="btn btn-outline-secondary d-print-none">
-                    <i class="fas fa-print me-2"></i>Print Report
+            <div class="modal-footer border-0 px-4 pb-3">
+                <button onclick="window.print()" class="btn btn-sm btn-outline-secondary d-print-none">
+                    <i class="fas fa-print me-2"></i>Print
                 </button>
-                <button type="button" class="btn btn-success px-4" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-sm btn-success px-3" data-bs-dismiss="modal">Close</button>
             </div>
         </div>
     </div>
@@ -183,14 +213,12 @@
         if (filtered.length > 0) {
             const first = filtered[0];
             
-            // Populate Modal Header Data
             document.getElementById('mStudentName').innerText = first.student_name;
             document.getElementById('mStudentAdm').innerText = first.adm_no;
             document.getElementById('mStudentClass').innerText = first.current_class || 'N/A';
             document.getElementById('mStudentTerm').innerText = `${first.term} ${first.year}`;
             document.getElementById('mExamType').innerText = first.exam_type || 'Main Exam';
 
-            // Populate Table
             const body = document.getElementById('tableBody');
             body.innerHTML = filtered.map(item => `
                 <tr>
