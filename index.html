@@ -7,14 +7,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* Animated Green Background */
         body {
             background: linear-gradient(-45deg, #064e3b, #059669, #10b981, #134e4a);
             background-size: 400% 400%;
             animation: gradient 15s ease infinite;
             min-height: 100vh;
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-            padding: 40px 20px;
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         @keyframes gradient {
@@ -23,19 +24,20 @@
             100% { background-position: 0% 50%; }
         }
 
-        .main-card {
+        .login-card {
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
             border-radius: 24px;
-            border: none;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            width: 100%;
+            max-width: 500px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.3);
             overflow: hidden;
         }
 
         .header-accent {
             background: #059669;
             color: white;
-            padding: 30px;
+            padding: 40px 20px;
             text-align: center;
         }
 
@@ -50,193 +52,166 @@
         .search-box:focus {
             border-color: #10b981;
             box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.1);
-            outline: none;
         }
 
+        /* CBC Grade Badges */
         .grade-pill {
-            padding: 6px 14px;
+            padding: 4px 12px;
             border-radius: 50px;
             font-weight: 700;
             font-size: 0.75rem;
             text-transform: uppercase;
-            display: inline-block;
         }
-
-        /* CBC Specific Colors */
-        .ee { background: #dcfce7; color: #166534; border: 1px solid #bbf7d0; } /* Exceeding Expectations */
-        .me { background: #dcf0fc; color: #0369a1; border: 1px solid #bae6fd; } /* Meeting Expectations */
-        .ae { background: #fef9c3; color: #854d0e; border: 1px solid #fef08a; } /* Approaching Expectations */
-        .be { background: #fee2e2; color: #991b1b; border: 1px solid #fecaca; } /* Below Expectations */
-
-        #resultsTable { display: none; }
+        .ee { background: #dcfce7; color: #166534; }
+        .me { background: #dcf0fc; color: #0369a1; }
+        .ae { background: #fef9c3; color: #854d0e; }
+        .be { background: #fee2e2; color: #991b1b; }
 
         @media print {
-            body { background: white; padding: 0; }
-            .main-card { box-shadow: none; border: 1px solid #eee; }
-            .btn, .input-group, #loader, footer { display: none !important; }
-            .header-accent { background: #059669 !important; -webkit-print-color-adjust: exact; }
+            .modal-header, .modal-footer, .d-print-none { display: none !important; }
+            .modal-content { border: none !important; }
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-lg-9">
-            <div class="card main-card">
-                <div class="header-accent">
-                    <h2 class="fw-bold mb-1">Rudan Junior Academy</h2>
-                    <p class="mb-0 opacity-75">Student Assessment Results Portal</p>
-                </div>
-                
-                <div class="card-body p-4 p-md-5">
-                    <div class="text-center mb-4 d-print-none">
-                        <p class="text-muted">Enter the student's Admission Number to access performance records.</p>
-                        <div class="input-group mb-3 shadow-sm rounded-3 overflow-hidden">
-                            <input type="text" id="admInput" class="form-control search-box border-0" placeholder="e.g. RJA/001/2026" autocomplete="off">
-                            <button class="btn btn-success px-4 fw-bold" onclick="search()">
-                                <i class="fas fa-search me-2"></i>Find Results
-                            </button>
-                        </div>
-                        <div id="loader" class="text-muted small mt-2">
-                            <i class="fas fa-circle-notch fa-spin me-1"></i> Initializing secure connection...
-                        </div>
-                    </div>
+<div class="login-card p-0">
+    <div class="header-accent">
+        <h2 class="fw-bold mb-1">Rudan Junior Academy</h2>
+        <p class="mb-0 opacity-75">Student Results Portal</p>
+    </div>
+    
+    <div class="card-body p-4 p-md-5 text-center">
+        <p class="text-muted mb-4">Enter Admission Number to view termly performance.</p>
+        
+        <input type="text" id="admInput" class="form-control search-box mb-3 text-center" placeholder="e.g. RJA/001/2026" autocomplete="off">
+        
+        <button class="btn btn-success w-100 py-3 fw-bold shadow-sm" onclick="search()">
+            <i class="fas fa-search me-2"></i>Access Results
+        </button>
 
-                    <div id="resultsTable">
-                        <hr class="my-4 d-print-none">
-                        <div class="d-flex justify-content-between align-items-center mb-4">
-                            <div>
-                                <h4 class="fw-bold text-success mb-0" id="studentName"></h4>
-                                <span class="text-muted small">Official Performance Record</span>
-                            </div>
-                            <div class="text-end">
-                                <span class="badge bg-dark px-3 py-2" id="studentAdm"></span>
-                                <button onclick="window.print()" class="btn btn-outline-secondary btn-sm d-block mt-2 d-print-none">
-                                    <i class="fas fa-print me-1"></i> Print Report
-                                </button>
-                            </div>
-                        </div>
-                        
-                        <div class="table-responsive">
-                            <table class="table table-hover align-middle">
-                                <thead class="table-light">
-                                    <tr>
-                                        <th>Learning Area (Subject)</th>
-                                        <th class="text-center">Score</th>
-                                        <th class="text-center">CBC Grade</th>
-                                        <th class="text-center">Assessment Term</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="tableBody">
-                                    </tbody>
-                            </table>
-                        </div>
-
-                        <div class="mt-4 p-3 bg-light rounded-3 d-print-none">
-                            <p class="small text-muted mb-0">
-                                <i class="fas fa-info-circle me-1"></i> 
-                                <strong>EE:</strong> Exceeding Expectations | <strong>ME:</strong> Meeting Expectations | 
-                                <strong>AE:</strong> Approaching Expectations | <strong>BE:</strong> Below Expectations
-                            </p>
-                        </div>
-                    </div>
-
-                    <div id="noResults" class="text-center py-5" style="display: none;">
-                        <i class="fas fa-user-slash text-muted fa-3x mb-3"></i>
-                        <h5 class="text-muted">No records found for that Admission Number.</h5>
-                        <p class="small text-muted">Ensure the ID matches the format on the student's admission card.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <footer class="text-center mt-4 text-white-50">
-                <small>&copy; 2026 Rudan Junior Academy. Digital Learning Systems.</small>
-            </footer>
+        <div id="loader" class="small mt-3 text-muted">
+            <i class="fas fa-circle-notch fa-spin me-1"></i> System Online
         </div>
     </div>
 </div>
 
+<div class="modal fade" id="resultsModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content border-0 shadow-lg" style="border-radius: 20px;">
+            <div class="modal-header bg-light border-0 px-4 py-3">
+                <h5 class="modal-title fw-bold text-success"><i class="fas fa-graduation-cap me-2"></i>Performance Report</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-4" id="printArea">
+                <div class="row mb-4">
+                    <div class="col-sm-6">
+                        <label class="text-muted small text-uppercase fw-bold">Student Name</label>
+                        <h4 class="fw-bold text-dark" id="mStudentName"></h4>
+                    </div>
+                    <div class="col-sm-6 text-sm-end">
+                        <label class="text-muted small text-uppercase fw-bold">Admission No</label>
+                        <h4 class="fw-bold text-muted" id="mStudentAdm"></h4>
+                    </div>
+                </div>
+
+                <div class="row mb-4">
+                    <div class="col-sm-4">
+                        <div class="p-3 bg-light rounded-3">
+                            <small class="text-muted d-block text-uppercase fw-bold" style="font-size: 10px;">Current Class</small>
+                            <span class="fw-bold text-dark" id="mStudentClass">---</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="p-3 bg-light rounded-3">
+                            <small class="text-muted d-block text-uppercase fw-bold" style="font-size: 10px;">Term / Year</small>
+                            <span class="fw-bold text-dark" id="mStudentTerm">---</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="p-3 bg-light rounded-3">
+                            <small class="text-muted d-block text-uppercase fw-bold" style="font-size: 10px;">Exam Type</small>
+                            <span class="fw-bold text-dark" id="mExamType">---</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Learning Area</th>
+                                <th class="text-center">Score</th>
+                                <th class="text-center">CBC Grade</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableBody"></tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer border-0 px-4 pb-4">
+                <button onclick="window.print()" class="btn btn-outline-secondary d-print-none">
+                    <i class="fas fa-print me-2"></i>Print Report
+                </button>
+                <button type="button" class="btn btn-success px-4" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script>
     let resultsData = [];
+    const myModal = new bootstrap.Modal(document.getElementById('resultsModal'));
 
-    // Initialize System and Load JSON
     async function init() {
-        const loader = document.getElementById('loader');
         try {
-            // Using a cache-buster for GitHub Pages to ensure fresh data
             const response = await fetch(`results.json?v=${new Date().getTime()}`);
-            if (!response.ok) throw new Error("Results database not found");
-            
-            const rawData = await response.json();
-            
-            // Clean and validate data
-            resultsData = Array.isArray(rawData) ? rawData.filter(item => item && typeof item === 'object') : [];
-            
-            loader.innerHTML = '<span class="text-success"><i class="fas fa-check-circle me-1"></i> Portal Ready</span>';
+            if (!response.ok) throw new Error();
+            resultsData = await response.json();
         } catch (e) {
-            console.error("Initialization error:", e);
-            loader.innerHTML = '<span class="text-danger"><i class="fas fa-exclamation-triangle me-1"></i> Offline - Contact Administrator</span>';
+            document.getElementById('loader').innerHTML = '<span class="text-danger">Offline</span>';
         }
     }
 
     function search() {
         const input = document.getElementById('admInput').value.trim().toUpperCase();
-        const table = document.getElementById('resultsTable');
-        const noResults = document.getElementById('noResults');
-        const body = document.getElementById('tableBody');
-        
         if (!input) return;
 
-        // Perform search against adm_no
-        const filtered = resultsData.filter(r => 
-            r.adm_no && r.adm_no.toUpperCase() === input
-        );
+        const filtered = resultsData.filter(r => r.adm_no && r.adm_no.toUpperCase() === input);
 
         if (filtered.length > 0) {
-            noResults.style.display = 'none';
-            table.style.display = 'block';
+            const first = filtered[0];
             
-            document.getElementById('studentName').innerText = filtered[0].student_name;
-            document.getElementById('studentAdm').innerText = "ID: " + filtered[0].adm_no;
+            // Populate Modal Header Data
+            document.getElementById('mStudentName').innerText = first.student_name;
+            document.getElementById('mStudentAdm').innerText = first.adm_no;
+            document.getElementById('mStudentClass').innerText = first.current_class || 'N/A';
+            document.getElementById('mStudentTerm').innerText = `${first.term} ${first.year}`;
+            document.getElementById('mExamType').innerText = first.exam_type || 'Main Exam';
 
+            // Populate Table
+            const body = document.getElementById('tableBody');
             body.innerHTML = filtered.map(item => `
                 <tr>
-                    <td class="fw-bold text-dark">${item.subject || 'N/A'}</td>
+                    <td class="fw-bold text-dark">${item.subject}</td>
                     <td class="text-center">${item.score}%</td>
                     <td class="text-center">
                         <span class="grade-pill ${(item.grade || 'be').toLowerCase()}">
-                            ${mapGradeLabel(item.grade)}
+                            ${item.grade}
                         </span>
                     </td>
-                    <td class="text-center text-muted small">${item.term} ${item.year || '2026'}</td>
                 </tr>
             `).join('');
+
+            myModal.show();
         } else {
-            table.style.display = 'none';
-            noResults.style.display = 'block';
+            alert("No records found for that Admission Number.");
         }
     }
 
-    // Maps shorthand codes to full CBC labels if necessary
-    function mapGradeLabel(grade) {
-        const labels = {
-            'EE': 'Exceeding Expectations',
-            'ME': 'Meeting Expectations',
-            'AE': 'Approaching Expectations',
-            'BE': 'Below Expectations'
-        };
-        const g = grade ? grade.toUpperCase() : 'BE';
-        return labels[g] || g;
-    }
-
-    // Handle Enter Key
-    document.getElementById('admInput').addEventListener('keypress', (e) => {
-        if (e.key === 'Enter') search();
-    });
-
+    document.getElementById('admInput').addEventListener('keypress', (e) => { if (e.key === 'Enter') search(); });
     init();
 </script>
-
 </body>
 </html>
