@@ -1,4 +1,145 @@
 {
-    "last_sync": "2026-04-27 18:33:36",
-    "data": []
+    "last_sync": "2026-04-27 18:43:24",
+    "data": [
+        {
+            "adm_no": "RJA\/036\/2026",
+            "student_name": "TEST SIX ALPHA",
+            "class_id": "6",
+            "term": "Term 1",
+            "year": "2026",
+            "subject": "English",
+            "score": "78",
+            "grade": "A"
+        },
+        {
+            "adm_no": "RJA\/036\/2026",
+            "student_name": "TEST SIX ALPHA",
+            "class_id": "6",
+            "term": "Term 1",
+            "year": "2026",
+            "subject": "Kiswahili",
+            "score": "82",
+            "grade": "A"
+        },
+        {
+            "adm_no": "RJA\/036\/2026",
+            "student_name": "TEST SIX ALPHA",
+            "class_id": "6",
+            "term": "Term 1",
+            "year": "2026",
+            "subject": "Mathematics",
+            "score": "91",
+            "grade": "A"
+        },
+        {
+            "adm_no": "RJA\/036\/2026",
+            "student_name": "TEST SIX ALPHA",
+            "class_id": "6",
+            "term": "Term 1",
+            "year": "2026",
+            "subject": "Science and Technology",
+            "score": "74",
+            "grade": "B"
+        },
+        {
+            "adm_no": "RJA\/036\/2026",
+            "student_name": "TEST SIX ALPHA",
+            "class_id": "6",
+            "term": "Term 1",
+            "year": "2026",
+            "subject": "Agriculture and Nutrition",
+            "score": "88",
+            "grade": "A"
+        },
+        {
+            "adm_no": "RJA\/036\/2026",
+            "student_name": "TEST SIX ALPHA",
+            "class_id": "6",
+            "term": "Term 1",
+            "year": "2026",
+            "subject": "Social Studies",
+            "score": "65",
+            "grade": "B"
+        },
+        {
+            "adm_no": "RJA\/036\/2026",
+            "student_name": "TEST SIX ALPHA",
+            "class_id": "6",
+            "term": "Term 1",
+            "year": "2026",
+            "subject": "Religious Education",
+            "score": "95",
+            "grade": "A"
+        },
+        {
+            "adm_no": "RJA\/036\/2026",
+            "student_name": "TEST SIX ALPHA",
+            "class_id": "6",
+            "term": "Term 1",
+            "year": "2026",
+            "subject": "Computer Studies",
+            "score": "89",
+            "grade": "A"
+        },
+        {
+            "adm_no": "RJA\/036\/2026",
+            "student_name": "TEST SIX ALPHA",
+            "class_id": "6",
+            "term": "Term 1",
+            "year": "2026",
+            "subject": "French",
+            "score": "70",
+            "grade": "B"
+        },
+        {
+            "adm_no": "RJA\/046\/2026",
+            "student_name": "TEST TWO KILO",
+            "class_id": "2",
+            "term": "Term 1",
+            "year": "2026",
+            "subject": "Languages Activity",
+            "score": "88",
+            "grade": "A"
+        },
+        {
+            "adm_no": "RJA\/046\/2026",
+            "student_name": "TEST TWO KILO",
+            "class_id": "2",
+            "term": "Term 1",
+            "year": "2026",
+            "subject": "Mathematics Activities",
+            "score": "92",
+            "grade": "A"
+        },
+        {
+            "adm_no": "RJA\/046\/2026",
+            "student_name": "TEST TWO KILO",
+            "class_id": "2",
+            "term": "Term 1",
+            "year": "2026",
+            "subject": "Environmental Activities",
+            "score": "75",
+            "grade": "B"
+        },
+        {
+            "adm_no": "RJA\/046\/2026",
+            "student_name": "TEST TWO KILO",
+            "class_id": "2",
+            "term": "Term 1",
+            "year": "2026",
+            "subject": "Hygiene and Nutrition Activities",
+            "score": "84",
+            "grade": "A"
+        },
+        {
+            "adm_no": "RJA\/046\/2026",
+            "student_name": "TEST TWO KILO",
+            "class_id": "2",
+            "term": "Term 1",
+            "year": "2026",
+            "subject": "Creative Arts and Sports",
+            "score": "90",
+            "grade": "A"
+        }
+    ]
 }
