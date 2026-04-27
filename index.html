@@ -53,7 +53,7 @@
             backdrop-filter: blur(10px);
             border-radius: 12px;
             width: 100%;
-            max-width: 380px; /* Compact standard size */
+            max-width: 380px; 
             box-shadow: 0 20px 40px rgba(0,0,0,0.4);
             overflow: hidden;
             border: 1px solid rgba(255,255,255,0.3);
@@ -66,13 +66,13 @@
         }
 
         .school-logo {
-            width: 70px; /* Standard size */
+            width: 70px;
             height: auto;
             margin-bottom: 5px;
         }
 
         .header-accent {
-            background: #f8fafc; /* Light neutral to let red text pop */
+            background: #f8fafc;
             padding: 15px;
             text-align: center;
             border-bottom: 1px solid #edf2f7;
@@ -80,7 +80,7 @@
 
         .header-accent h2 {
             font-size: 1.25rem;
-            color: #dc3545; /* Specific Red Color */
+            color: #dc3545;
             margin-bottom: 0;
             text-transform: uppercase;
             letter-spacing: 0.5px;
@@ -123,7 +123,6 @@
             transform: scale(0.98);
         }
 
-        /* CBC Grade Badges */
         .grade-pill {
             padding: 2px 8px;
             border-radius: 4px;
@@ -155,16 +154,16 @@
     </div>
     
     <div class="card-body text-center">
-        <p class="text-muted small mb-3">Enter admission number to continue</p>
+        <p class="text-muted small mb-3">Enter admission number (e.g., RJA/001/2026)</p>
         
-        <input type="text" id="admInput" class="form-control search-box mb-3 text-center" placeholder="RJA/000/2026" autocomplete="off">
+        <input type="text" id="admInput" class="form-control search-box mb-3 text-center" placeholder="RJA/___/2026" autocomplete="off">
         
         <button class="btn btn-success w-100 btn-access fw-bold shadow-sm" onclick="search()">
             <i class="fas fa-sign-in-alt me-2"></i>View Results
         </button>
 
         <div id="loader" class="mt-3 text-muted" style="font-size: 0.7rem;">
-            <i class="fas fa-shield-alt me-1"></i> Secure Access
+            <i class="fas fa-shield-alt me-1"></i> Secure Portal Access
         </div>
     </div>
 </div>
@@ -179,7 +178,7 @@
             <div class="modal-body p-4" id="printArea">
                 <div class="row mb-3">
                     <div class="col-sm-6">
-                        <label class="text-muted small text-uppercase fw-bold" style="font-size: 9px;">Student</label>
+                        <label class="text-muted small text-uppercase fw-bold" style="font-size: 9px;">Student Name</label>
                         <h6 class="fw-bold text-dark mb-0" id="mStudentName"></h6>
                     </div>
                     <div class="col-sm-6 text-sm-end">
@@ -203,7 +202,7 @@
                     </div>
                     <div class="col-4">
                         <div class="p-2 bg-light rounded text-center">
-                            <small class="text-muted d-block text-uppercase fw-bold" style="font-size: 8px;">Exam</small>
+                            <small class="text-muted d-block text-uppercase fw-bold" style="font-size: 8px;">Exam Type</small>
                             <span class="small fw-bold" id="mExamType">---</span>
                         </div>
                     </div>
@@ -224,7 +223,7 @@
             </div>
             <div class="modal-footer border-0 px-4 pb-3">
                 <button onclick="window.print()" class="btn btn-sm btn-outline-secondary d-print-none">
-                    <i class="fas fa-print me-2"></i>Print
+                    <i class="fas fa-print me-2"></i>Print Result
                 </button>
                 <button type="button" class="btn btn-sm btn-success px-3" data-bs-dismiss="modal">Close</button>
             </div>
@@ -237,20 +236,28 @@
     let resultsData = [];
     const myModal = new bootstrap.Modal(document.getElementById('resultsModal'));
 
+    // Updated to use a relative path for GitHub Pages compatibility
     async function init() {
+        const loader = document.getElementById('loader');
         try {
-            const response = await fetch(`results.json?v=${new Date().getTime()}`);
-            if (!response.ok) throw new Error();
+            const response = await fetch('results.json?v=' + new Date().getTime());
+            if (!response.ok) throw new Error("Could not load data");
             resultsData = await response.json();
+            loader.innerHTML = '<i class="fas fa-check-circle text-success me-1"></i> System Ready';
         } catch (e) {
-            document.getElementById('loader').innerHTML = '<span class="text-danger">Sync Error</span>';
+            console.error(e);
+            loader.innerHTML = '<span class="text-danger"><i class="fas fa-exclamation-triangle me-1"></i> Connection Error</span>';
         }
     }
 
     function search() {
         const input = document.getElementById('admInput').value.trim().toUpperCase();
-        if (!input) return;
+        if (!input) {
+            alert("Please enter an admission number.");
+            return;
+        }
 
+        // Filter data based on Admission Number
         const filtered = resultsData.filter(r => r.adm_no && r.adm_no.toUpperCase() === input);
 
         if (filtered.length > 0) {
@@ -259,8 +266,8 @@
             document.getElementById('mStudentName').innerText = first.student_name;
             document.getElementById('mStudentAdm').innerText = first.adm_no;
             document.getElementById('mStudentClass').innerText = first.current_class || 'N/A';
-            document.getElementById('mStudentTerm').innerText = `${first.term} ${first.year}`;
-            document.getElementById('mExamType').innerText = first.exam_type || 'Final';
+            document.getElementById('mStudentTerm').innerText = first.term && first.year ? `${first.term} ${first.year}` : 'N/A';
+            document.getElementById('mExamType').innerText = first.exam_type || 'Main';
 
             const body = document.getElementById('tableBody');
             body.innerHTML = filtered.map(item => `
@@ -269,7 +276,7 @@
                     <td class="text-center">${item.score}%</td>
                     <td class="text-center">
                         <span class="grade-pill ${(item.grade || 'be').toLowerCase()}">
-                            ${item.grade}
+                            ${item.grade || 'N/A'}
                         </span>
                     </td>
                 </tr>
@@ -277,12 +284,15 @@
 
             myModal.show();
         } else {
-            alert("Record not found. Please check the Admission Number.");
+            alert("Record not found for Admission Number: " + input);
         }
     }
 
-    document.getElementById('admInput').addEventListener('keypress', (e) => { if (e.key === 'Enter') search(); });
-    init();
+    document.getElementById('admInput').addEventListener('keypress', (e) => { 
+        if (e.key === 'Enter') search(); 
+    });
+
+    window.onload = init;
 </script>
 </body>
 </html>
