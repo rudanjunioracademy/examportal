@@ -1,47 +1,4 @@
 {
-  "last_sync": "2026-04-28 09:15:00",
-  "data": [
-    {
-      "adm_no": "RJA/001/2026",
-      "student_name": "JOHN DOE",
-      "class_id": "4",
-      "term": "Term 1",
-      "year": "2026",
-      "total_score": 265,
-      "position": 1,
-      "subjects": [
-        { "name": "Mathematics", "score": 92, "grade": "EE1" },
-        { "name": "English", "score": 88, "grade": "EE2" },
-        { "name": "Kiswahili", "score": 85, "grade": "EE2" }
-      ]
-    },
-    {
-      "adm_no": "RJA/002/2026",
-      "student_name": "JANE SMITH",
-      "class_id": "4",
-      "term": "Term 1",
-      "year": "2026",
-      "total_score": 240,
-      "position": 2,
-      "subjects": [
-        { "name": "Mathematics", "score": 78, "grade": "EE2" },
-        { "name": "English", "score": 82, "grade": "EE2" },
-        { "name": "Kiswahili", "score": 80, "grade": "EE2" }
-      ]
-    },
-    {
-      "adm_no": "RJA/005/2026",
-      "student_name": "SAMUEL WANJIKU",
-      "class_id": "4",
-      "term": "Term 1",
-      "year": "2026",
-      "total_score": 145,
-      "position": 3,
-      "subjects": [
-        { "name": "Mathematics", "score": 55, "grade": "ME2" },
-        { "name": "English", "score": 45, "grade": "ME2" },
-        { "name": "Kiswahili", "score": 45, "grade": "ME2" }
-      ]
-    }
-  ]
+    "last_sync": "2026-04-27 23:11:29",
+    "data": []
 }
