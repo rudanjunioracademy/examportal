@@ -21,22 +21,11 @@
             overflow: hidden;
         }
 
-        /* Curtain folding animation */
         body::before {
             content: "";
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: repeating-linear-gradient(
-                90deg,
-                #064e3b 0%,
-                #059669 5%,
-                #10b981 10%,
-                #059669 15%,
-                #064e3b 20%
-            );
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: repeating-linear-gradient(90deg, #064e3b 0%, #059669 5%, #10b981 10%, #059669 15%, #064e3b 20%);
             background-size: 200% 100%;
             animation: curtainWave 10s ease-in-out infinite;
             z-index: -1;
@@ -60,88 +49,31 @@
             border: 1px solid rgba(255,255,255,0.3);
         }
 
-        .logo-container {
-            padding-top: 25px;
-            text-align: center;
-            background: white;
-        }
-
-        .school-logo {
-            width: 70px;
-            height: auto;
-            margin-bottom: 5px;
-        }
-
-        .header-accent {
-            background: #f8fafc;
-            padding: 15px;
-            text-align: center;
-            border-bottom: 1px solid #edf2f7;
-        }
-
-        .header-accent h2 {
-            font-size: 1.25rem;
-            color: #dc3545;
-            margin-bottom: 0;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .header-accent p {
-            font-size: 0.8rem;
-            color: #64748b;
-            margin-top: 2px;
-        }
-
-        .card-body {
-            padding: 25px !important;
-        }
-
-        .search-box {
-            border: 1px solid #cbd5e1;
-            border-radius: 6px;
-            padding: 8px 12px;
-            font-size: 0.9rem;
-            transition: all 0.2s;
-        }
-
-        .search-box:focus {
-            border-color: #dc3545;
-            box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.1);
-            outline: none;
-        }
-
-        .btn-access {
-            background-color: #059669;
-            border: none;
-            padding: 10px;
-            font-size: 0.9rem;
-            border-radius: 6px;
-            transition: transform 0.1s;
-        }
-
-        .btn-access:active {
-            transform: scale(0.98);
-        }
+        .logo-container { padding-top: 25px; text-align: center; background: white; }
+        .school-logo { width: 70px; height: auto; margin-bottom: 5px; }
+        .header-accent { background: #f8fafc; padding: 15px; text-align: center; border-bottom: 1px solid #edf2f7; }
+        .header-accent h2 { font-size: 1.25rem; color: #dc3545; margin-bottom: 0; text-transform: uppercase; letter-spacing: 0.5px; }
+        .header-accent p { font-size: 0.8rem; color: #64748b; margin-top: 2px; }
+        .card-body { padding: 25px !important; }
+        .search-box { border: 1px solid #cbd5e1; border-radius: 6px; padding: 8px 12px; font-size: 0.9rem; transition: all 0.2s; }
+        .search-box:focus { border-color: #dc3545; box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.1); outline: none; }
+        .btn-access { background-color: #059669; border: none; padding: 10px; font-size: 0.9rem; border-radius: 6px; transition: transform 0.1s; }
+        .btn-access:active { transform: scale(0.98); }
 
         .grade-pill {
-            padding: 2px 8px;
+            padding: 3px 10px;
             border-radius: 4px;
-            font-weight: 700;
-            font-size: 0.65rem;
-            text-transform: uppercase;
+            font-weight: 800;
+            font-size: 0.7rem;
         }
         
-        .a, .ee { background: #dcfce7; color: #166534; }
-        .b, .me { background: #dcf0fc; color: #0369a1; }
-        .c, .ae { background: #fef9c3; color: #854d0e; }
-        .d, .e, .be { background: #fee2e2; color: #991b1b; }
+        /* CBC Grade Colors */
+        .ee { background: #dcfce7; color: #166534; } /* Exceeding */
+        .me { background: #dcf0fc; color: #0369a1; } /* Meeting */
+        .ae { background: #fef9c3; color: #854d0e; } /* Approaching */
+        .be { background: #fee2e2; color: #991b1b; } /* Below */
 
-        /* Specific PDF styling to ensure clean layout in the file */
-        #printArea {
-            background: white;
-            padding: 20px;
-        }
+        #printArea { background: white; padding: 20px; }
 
         @media print {
             .modal-header, .modal-footer, .d-print-none { display: none !important; }
@@ -165,13 +97,10 @@
     
     <div class="card-body text-center">
         <p class="text-muted small mb-3">Enter admission number (e.g., RJA/001/2026)</p>
-        
         <input type="text" id="admInput" class="form-control search-box mb-3 text-center" placeholder="RJA/___/2026" autocomplete="off">
-        
         <button class="btn btn-success w-100 btn-access fw-bold shadow-sm" onclick="search()">
             <i class="fas fa-sign-in-alt me-2"></i>View Results
         </button>
-
         <div id="loader" class="mt-3 text-muted" style="font-size: 0.7rem;">
             <i class="fas fa-shield-alt me-1"></i> Checking Secure Portal...
         </div>
@@ -182,14 +111,14 @@
     <div class="modal-dialog modal-lg modal-dialog-centered">
         <div class="modal-content border-0 shadow-lg" style="border-radius: 8px;">
             <div class="modal-header bg-light border-0 px-4 py-2">
-                <h6 class="modal-title fw-bold text-success"><i class="fas fa-file-invoice me-2"></i>Academic Report</h6>
+                <h6 class="modal-title fw-bold text-success"><i class="fas fa-file-invoice me-2"></i>CBC Performance Report</h6>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             
             <div class="modal-body p-4" id="printArea">
                 <div class="text-center mb-4 d-none d-print-block">
                      <h4 class="fw-bold text-danger">RUDAN JUNIOR ACADEMY</h4>
-                     <p class="small text-muted">Academic Excellence Record</p>
+                     <p class="small text-muted">CBC Academic Record</p>
                      <hr>
                 </div>
 
@@ -204,23 +133,29 @@
                     </div>
                 </div>
 
-                <div class="row mb-3">
-                    <div class="col-4">
-                        <div class="p-2 bg-light rounded text-center">
+                <div class="row mb-3 text-center">
+                    <div class="col-3">
+                        <div class="p-2 bg-light rounded">
                             <small class="text-muted d-block text-uppercase fw-bold" style="font-size: 8px;">Grade</small>
                             <span class="small fw-bold" id="mStudentClass">---</span>
                         </div>
                     </div>
-                    <div class="col-4">
-                        <div class="p-2 bg-light rounded text-center">
-                            <small class="text-muted d-block text-uppercase fw-bold" style="font-size: 8px;">Period</small>
-                            <span class="small fw-bold" id="mStudentTerm">---</span>
+                    <div class="col-3">
+                        <div class="p-2 bg-light rounded">
+                            <small class="text-muted d-block text-uppercase fw-bold" style="font-size: 8px;">Total Score</small>
+                            <span class="small fw-bold text-primary" id="mTotalScore">0</span>
                         </div>
                     </div>
-                    <div class="col-4">
-                        <div class="p-2 bg-light rounded text-center">
-                            <small class="text-muted d-block text-uppercase fw-bold" style="font-size: 8px;">Verified</small>
-                            <span class="small fw-bold text-success"><i class="fas fa-check-circle"></i></span>
+                    <div class="col-3">
+                        <div class="p-2 bg-light rounded">
+                            <small class="text-muted d-block text-uppercase fw-bold" style="font-size: 8px;">Position</small>
+                            <span class="small fw-bold text-danger" id="mPosition">---</span>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="p-2 bg-light rounded">
+                            <small class="text-muted d-block text-uppercase fw-bold" style="font-size: 8px;">Period</small>
+                            <span class="small fw-bold" id="mStudentTerm">---</span>
                         </div>
                     </div>
                 </div>
@@ -231,15 +166,11 @@
                             <tr>
                                 <th>Learning Area</th>
                                 <th class="text-center">Score</th>
-                                <th class="text-center">Grade</th>
+                                <th class="text-center">Performance Level</th>
                             </tr>
                         </thead>
                         <tbody id="tableBody"></tbody>
                     </table>
-                </div>
-                
-                <div class="mt-4 text-center d-none d-print-block">
-                    <p class="small text-muted">This is an electronically generated report. No signature required.</p>
                 </div>
             </div>
 
@@ -270,39 +201,44 @@
             resultsData = payload.data || [];
             loader.innerHTML = '<i class="fas fa-check-circle text-success me-1"></i> Portal Ready';
         } catch (e) {
-            console.error(e);
             loader.innerHTML = '<span class="text-danger"><i class="fas fa-times-circle me-1"></i> Data Offline</span>';
         }
     }
 
     function search() {
         const input = document.getElementById('admInput').value.trim().toUpperCase();
-        if (!input) {
-            alert("Please enter an admission number.");
-            return;
-        }
+        if (!input) { alert("Please enter an admission number."); return; }
 
-        const filtered = resultsData.filter(r => r.adm_no && r.adm_no.toUpperCase() === input);
+        const student = resultsData.find(r => r.adm_no && r.adm_no.toUpperCase() === input);
 
-        if (filtered.length > 0) {
-            const first = filtered[0];
-            document.getElementById('mStudentName').innerText = first.student_name;
-            document.getElementById('mStudentAdm').innerText = first.adm_no;
-            document.getElementById('mStudentClass').innerText = "Grade " + (first.class_id || 'N/A');
-            document.getElementById('mStudentTerm').innerText = first.term + " " + first.year;
+        if (student) {
+            document.getElementById('mStudentName').innerText = student.student_name;
+            document.getElementById('mStudentAdm').innerText = student.adm_no;
+            document.getElementById('mStudentClass').innerText = "Grade " + (student.class_id || 'N/A');
+            document.getElementById('mTotalScore').innerText = student.total_score;
+            document.getElementById('mPosition').innerText = student.position;
+            document.getElementById('mStudentTerm').innerText = student.term + " " + student.year;
 
             const body = document.getElementById('tableBody');
-            body.innerHTML = filtered.map(item => `
+            body.innerHTML = student.subjects.map(item => {
+                // Determine color class based on CBC Grade
+                const g = item.grade.toLowerCase();
+                let cssClass = 'be';
+                if (g.startsWith('ee')) cssClass = 'ee';
+                else if (g.startsWith('me')) cssClass = 'me';
+                else if (g.startsWith('ae')) cssClass = 'ae';
+
+                return `
                 <tr>
-                    <td class="fw-bold">${item.subject}</td>
+                    <td class="fw-bold">${item.name}</td>
                     <td class="text-center">${item.score}%</td>
                     <td class="text-center">
-                        <span class="grade-pill ${(item.grade || 'be').toLowerCase()}">
-                            ${item.grade || 'N/A'}
+                        <span class="grade-pill ${cssClass}">
+                            ${item.grade}
                         </span>
                     </td>
-                </tr>
-            `).join('');
+                </tr>`;
+            }).join('');
 
             myModal.show();
         } else {
@@ -310,21 +246,17 @@
         }
     }
 
-    // PDF Generation Function
     function downloadPDF() {
         const element = document.getElementById('printArea');
         const adm = document.getElementById('mStudentAdm').innerText.replace(/\//g, '_');
         const name = document.getElementById('mStudentName').innerText;
-
         const opt = {
-            margin:       10,
-            filename:     `Report_${adm}_${name}.pdf`,
-            image:        { type: 'jpeg', quality: 0.98 },
-            html2canvas:  { scale: 2, useCORS: true },
-            jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            margin: 10,
+            filename: `Report_${adm}_${name}.pdf`,
+            image: { type: 'jpeg', quality: 0.98 },
+            html2canvas: { scale: 2, useCORS: true },
+            jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
         };
-
-        // New Promise-based usage:
         html2pdf().set(opt).from(element).save();
     }
 
