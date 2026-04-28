@@ -21,21 +21,28 @@
             overflow: hidden;
         }
 
-        body::before {
-            content: "";
+        /* Floating Objects Container */
+        .academic-bg {
             position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: repeating-linear-gradient(90deg, #064e3b 0%, #059669 5%, #10b981 10%, #059669 15%, #064e3b 20%);
-            background-size: 200% 100%;
-            animation: curtainWave 10s ease-in-out infinite;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             z-index: -1;
-            opacity: 0.8;
+            pointer-events: none;
         }
 
-        @keyframes curtainWave {
-            0% { background-position: 0% 0%; transform: skewX(0deg); }
-            50% { background-position: 100% 0%; transform: skewX(2deg); }
-            100% { background-position: 0% 0%; transform: skewX(0deg); }
+        .floating-item {
+            position: absolute;
+            color: rgba(255, 255, 255, 0.15);
+            animation: float linear infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(110vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 0.6; }
+            90% { opacity: 0.6; }
+            100% { transform: translateY(-20vh) rotate(360deg); opacity: 0; }
         }
 
         .login-card {
@@ -47,6 +54,7 @@
             box-shadow: 0 20px 40px rgba(0,0,0,0.4);
             overflow: hidden;
             border: 1px solid rgba(255,255,255,0.3);
+            z-index: 10;
         }
 
         .logo-container { padding-top: 25px; text-align: center; background: white; }
@@ -67,20 +75,13 @@
             font-size: 0.7rem;
         }
         
-        /* CBC Grade Colors */
-        .ee { background: #dcfce7; color: #166534; } /* Exceeding */
-        .me { background: #dcf0fc; color: #0369a1; } /* Meeting */
-        .ae { background: #fef9c3; color: #854d0e; } /* Approaching */
-        .be { background: #fee2e2; color: #991b1b; } /* Below */
+        .ee { background: #dcfce7; color: #166534; }
+        .me { background: #dcf0fc; color: #0369a1; }
+        .ae { background: #fef9c3; color: #854d0e; }
+        .be { background: #fee2e2; color: #991b1b; }
 
         #printArea { background: white; padding: 20px; }
 
-        /* Remarks & Signatures Styling */
-        .remarks-box {
-            margin-top: 20px;
-            border-top: 2px solid #eee;
-            padding-top: 15px;
-        }
         .writing-line {
             border-bottom: 1px solid #ccc;
             height: 30px;
@@ -89,37 +90,41 @@
         }
         .sig-box {
             border: 1px dashed #cbd5e1;
-            height: 80px;
+            height: 120px;
             display: flex;
+            flex-direction: column; /* Ensures content stacks vertically */
             align-items: center;
             justify-content: center;
             color: #94a3b8;
             font-size: 0.7rem;
             text-transform: uppercase;
             border-radius: 4px;
+            overflow: hidden;
+            margin-top: 5px;
         }
 
-        /* --- PRINT OPTIMIZATION --- */
+        .sig-img {
+            max-height: 110px;
+            width: auto;
+            object-fit: contain;
+        }
+
         @media print {
-            @page {
-                size: A4;
-                margin: 10mm;
-            }
+            @page { size: A4; margin: 10mm; }
             .modal-header, .modal-footer, .d-print-none, .login-card { display: none !important; }
             .modal { position: static; display: block; overflow: visible; }
             .modal-dialog { max-width: 100% !important; margin: 0 !important; }
             .modal-content { border: none !important; box-shadow: none !important; }
-            #printArea { 
-                padding: 0 !important; 
-                width: 100%;
-            }
+            #printArea { padding: 0 !important; width: 100%; }
             body { background: white !important; }
-            body::before { display: none; }
+            .academic-bg { display: none; }
             .table { width: 100% !important; }
         }
     </style>
 </head>
 <body>
+
+<div class="academic-bg" id="academicBg"></div>
 
 <div class="login-card p-0">
     <div class="logo-container">
@@ -132,7 +137,7 @@
     </div>
     
     <div class="card-body text-center">
-        <p class="text-muted small mb-3">Enter admission number (e.g., RJA/001/2026)</p>
+        <p class="text-muted small mb-3">Enter admission number (e.g., RJA/number/2026)</p>
         <input type="text" id="admInput" class="form-control search-box mb-3 text-center" placeholder="RJA/___/2026" autocomplete="off">
         <button class="btn btn-success w-100 btn-access fw-bold shadow-sm" onclick="search()">
             <i class="fas fa-sign-in-alt me-2"></i>View Results
@@ -209,20 +214,18 @@
                     </table>
                 </div>
 
-                <div class="remarks-box mt-4">
-                    <label class="text-muted small text-uppercase fw-bold mb-2" style="font-size: 9px;">Class Teacher's Remarks</label>
-                    <div class="writing-line"></div>
-                    <div class="writing-line"></div>
-                </div>
-
-                <div class="row mt-4 pt-2">
-                    <div class="col-6 col-sm-4">
-                        <label class="text-muted small text-uppercase fw-bold mb-2" style="font-size: 9px;">Headteacher's Signature</label>
-                        <div class="sig-box">Sign Here</div>
+                <div class="row mt-5 pt-2">
+                    <div class="col-6 col-sm-4 text-center">
+                        <label class="text-muted small text-uppercase fw-bold mb-2 d-block" style="font-size: 9px;">Headteacher's Signature</label>
+                        <div class="sig-box border-0 mx-auto">
+                            <img src="sign.png" alt="Headteacher Signature" class="sig-img" onerror="this.parentElement.style.border='1px dashed #cbd5e1'; this.style.display='none'; this.parentElement.innerText='Sign Here'">
+                        </div>
                     </div>
-                    <div class="col-6 col-sm-4 offset-sm-4 text-end">
-                        <label class="text-muted small text-uppercase fw-bold mb-2" style="font-size: 9px;">Official School Stamp</label>
-                        <div class="sig-box">Place Stamp Here</div>
+                    <div class="col-6 col-sm-4 offset-sm-4 text-center">
+                        <label class="text-muted small text-uppercase fw-bold mb-2 d-block" style="font-size: 9px;">Official School Stamp</label>
+                        <div class="sig-box border-0 mx-auto">
+                            <img src="stamp.png" alt="School Stamp" class="sig-img" onerror="this.parentElement.style.border='1px dashed #cbd5e1'; this.style.display='none'; this.parentElement.innerText='Place Stamp Here'">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -245,7 +248,27 @@
     let resultsData = [];
     const myModal = new bootstrap.Modal(document.getElementById('resultsModal'));
 
+    function createAcademicBg() {
+        const bg = document.getElementById('academicBg');
+        const icons = ['fa-book', 'fa-pencil-alt', 'fa-eraser', 'fa-graduation-cap', 'fa-apple-alt'];
+        const count = 15;
+
+        for (let i = 0; i < count; i++) {
+            const item = document.createElement('i');
+            const icon = icons[Math.floor(Math.random() * icons.length)];
+            
+            item.className = `fas ${icon} floating-item`;
+            item.style.left = `${Math.random() * 100}%`;
+            item.style.fontSize = `${Math.random() * (30 - 15) + 15}px`;
+            item.style.animationDuration = `${Math.random() * (15 - 8) + 8}s`;
+            item.style.animationDelay = `${Math.random() * 5}s`;
+            
+            bg.appendChild(item);
+        }
+    }
+
     async function init() {
+        createAcademicBg(); 
         const loader = document.getElementById('loader');
         try {
             const response = await fetch('results.json?v=' + new Date().getTime());
@@ -302,20 +325,13 @@
         const element = document.getElementById('printArea');
         const adm = document.getElementById('mStudentAdm').innerText.replace(/\//g, '_');
         const name = document.getElementById('mStudentName').innerText;
-        
-        // Temporarily force show print elements for the PDF engine
         element.classList.add('d-block');
 
         const opt = {
             margin: 5,
             filename: `Report_${adm}_${name}.pdf`,
             image: { type: 'jpeg', quality: 0.98 },
-            html2canvas: { 
-                scale: 2, 
-                useCORS: true,
-                logging: false,
-                letterRendering: true
-            },
+            html2canvas: { scale: 2, useCORS: true, logging: false, letterRendering: true },
             jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
         };
         
