@@ -75,6 +75,30 @@
 
         #printArea { background: white; padding: 20px; }
 
+        /* Remarks & Signatures Styling */
+        .remarks-box {
+            margin-top: 20px;
+            border-top: 2px solid #eee;
+            padding-top: 15px;
+        }
+        .writing-line {
+            border-bottom: 1px solid #ccc;
+            height: 30px;
+            margin-bottom: 5px;
+            width: 100%;
+        }
+        .sig-box {
+            border: 1px dashed #cbd5e1;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #94a3b8;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            border-radius: 4px;
+        }
+
         @media print {
             .modal-header, .modal-footer, .d-print-none { display: none !important; }
             .modal-content { border: none !important; }
@@ -171,6 +195,23 @@
                         </thead>
                         <tbody id="tableBody"></tbody>
                     </table>
+                </div>
+
+                <div class="remarks-box mt-4">
+                    <label class="text-muted small text-uppercase fw-bold mb-2" style="font-size: 9px;">Class Teacher's Remarks</label>
+                    <div class="writing-line"></div>
+                    <div class="writing-line"></div>
+                </div>
+
+                <div class="row mt-4 pt-2">
+                    <div class="col-4">
+                        <label class="text-muted small text-uppercase fw-bold mb-2" style="font-size: 9px;">Headteacher's Signature</label>
+                        <div class="sig-box">Sign Here</div>
+                    </div>
+                    <div class="col-4 offset-4 text-end">
+                        <label class="text-muted small text-uppercase fw-bold mb-2" style="font-size: 9px;">Official School Stamp</label>
+                        <div class="sig-box">Place Stamp Here</div>
+                    </div>
                 </div>
             </div>
 
