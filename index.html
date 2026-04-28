@@ -99,11 +99,23 @@
             border-radius: 4px;
         }
 
+        /* --- PRINT OPTIMIZATION --- */
         @media print {
-            .modal-header, .modal-footer, .d-print-none { display: none !important; }
-            .modal-content { border: none !important; }
+            @page {
+                size: A4;
+                margin: 10mm;
+            }
+            .modal-header, .modal-footer, .d-print-none, .login-card { display: none !important; }
+            .modal { position: static; display: block; overflow: visible; }
+            .modal-dialog { max-width: 100% !important; margin: 0 !important; }
+            .modal-content { border: none !important; box-shadow: none !important; }
+            #printArea { 
+                padding: 0 !important; 
+                width: 100%;
+            }
             body { background: white !important; }
             body::before { display: none; }
+            .table { width: 100% !important; }
         }
     </style>
 </head>
@@ -147,11 +159,11 @@
                 </div>
 
                 <div class="row mb-3">
-                    <div class="col-sm-6">
+                    <div class="col-sm-6 col-6">
                         <label class="text-muted small text-uppercase fw-bold" style="font-size: 9px;">Student Name</label>
                         <h6 class="fw-bold text-dark mb-0" id="mStudentName"></h6>
                     </div>
-                    <div class="col-sm-6 text-sm-end">
+                    <div class="col-sm-6 col-6 text-end">
                         <label class="text-muted small text-uppercase fw-bold" style="font-size: 9px;">Admission No</label>
                         <h6 class="fw-bold text-muted mb-0" id="mStudentAdm"></h6>
                     </div>
@@ -204,11 +216,11 @@
                 </div>
 
                 <div class="row mt-4 pt-2">
-                    <div class="col-4">
+                    <div class="col-6 col-sm-4">
                         <label class="text-muted small text-uppercase fw-bold mb-2" style="font-size: 9px;">Headteacher's Signature</label>
                         <div class="sig-box">Sign Here</div>
                     </div>
-                    <div class="col-4 offset-4 text-end">
+                    <div class="col-6 col-sm-4 offset-sm-4 text-end">
                         <label class="text-muted small text-uppercase fw-bold mb-2" style="font-size: 9px;">Official School Stamp</label>
                         <div class="sig-box">Place Stamp Here</div>
                     </div>
@@ -262,7 +274,6 @@
 
             const body = document.getElementById('tableBody');
             body.innerHTML = student.subjects.map(item => {
-                // Determine color class based on CBC Grade
                 const g = item.grade.toLowerCase();
                 let cssClass = 'be';
                 if (g.startsWith('ee')) cssClass = 'ee';
@@ -291,14 +302,26 @@
         const element = document.getElementById('printArea');
         const adm = document.getElementById('mStudentAdm').innerText.replace(/\//g, '_');
         const name = document.getElementById('mStudentName').innerText;
+        
+        // Temporarily force show print elements for the PDF engine
+        element.classList.add('d-block');
+
         const opt = {
-            margin: 10,
+            margin: 5,
             filename: `Report_${adm}_${name}.pdf`,
             image: { type: 'jpeg', quality: 0.98 },
-            html2canvas: { scale: 2, useCORS: true },
+            html2canvas: { 
+                scale: 2, 
+                useCORS: true,
+                logging: false,
+                letterRendering: true
+            },
             jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
         };
-        html2pdf().set(opt).from(element).save();
+        
+        html2pdf().set(opt).from(element).save().then(() => {
+            element.classList.remove('d-block');
+        });
     }
 
     document.getElementById('admInput').addEventListener('keypress', (e) => { 
