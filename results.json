@@ -1,10 +1,11 @@
 {
-    "last_sync": "2026-04-29 11:49:39",
+    "last_sync": "2026-04-29 11:55:59",
     "data": [
         {
             "adm_no": "RJA\/001\/2026",
             "student_name": "DARWIN MURIANZE",
-            "class_id": "12",
+            "class_name": "Grade 9",
+            "exam_type": "0",
             "term": "Term 1",
             "year": "2026",
             "subjects": [
@@ -64,13 +65,13 @@
                     "grade": "EE1"
                 }
             ],
-            "total_score": 952,
-            "position": 1
+            "total_score": 952
         },
         {
             "adm_no": "RJA\/002\/2026",
             "student_name": "HABRAHAM OTIENO",
-            "class_id": "12",
+            "class_name": "Grade 9",
+            "exam_type": "0",
             "term": "Term 1",
             "year": "2026",
             "subjects": [
@@ -130,13 +131,13 @@
                     "grade": "EE1"
                 }
             ],
-            "total_score": 950,
-            "position": 2
+            "total_score": 950
         },
         {
             "adm_no": "RJA\/003\/2026",
             "student_name": "MITCHELLE AWINO",
-            "class_id": "12",
+            "class_name": "Grade 9",
+            "exam_type": "0",
             "term": "Term 1",
             "year": "2026",
             "subjects": [
@@ -196,13 +197,13 @@
                     "grade": "EE1"
                 }
             ],
-            "total_score": 913,
-            "position": 3
+            "total_score": 913
         },
         {
             "adm_no": "RJA\/004\/2026",
             "student_name": "JOYCE AGATTA",
-            "class_id": "12",
+            "class_name": "Grade 9",
+            "exam_type": "0",
             "term": "Term 1",
             "year": "2026",
             "subjects": [
@@ -262,13 +263,13 @@
                     "grade": "EE2"
                 }
             ],
-            "total_score": 862,
-            "position": 4
+            "total_score": 862
         },
         {
             "adm_no": "RJA\/005\/2026",
             "student_name": "CECELIA MGHOI",
-            "class_id": "12",
+            "class_name": "Grade 9",
+            "exam_type": "0",
             "term": "Term 1",
             "year": "2026",
             "subjects": [
@@ -328,13 +329,13 @@
                     "grade": "EE2"
                 }
             ],
-            "total_score": 860,
-            "position": 5
+            "total_score": 860
         },
         {
             "adm_no": "RJA\/006\/2026",
             "student_name": "GRACE NHIAL",
-            "class_id": "12",
+            "class_name": "Grade 9",
+            "exam_type": "0",
             "term": "Term 1",
             "year": "2026",
             "subjects": [
@@ -394,13 +395,13 @@
                     "grade": "EE2"
                 }
             ],
-            "total_score": 845,
-            "position": 6
+            "total_score": 845
         },
         {
             "adm_no": "RJA\/008\/2026",
             "student_name": "BRUNO OKEKA",
-            "class_id": "12",
+            "class_name": "Grade 9",
+            "exam_type": "0",
             "term": "Term 1",
             "year": "2026",
             "subjects": [
@@ -460,13 +461,13 @@
                     "grade": "EE2"
                 }
             ],
-            "total_score": 817,
-            "position": 7
+            "total_score": 817
         },
         {
             "adm_no": "RJA\/007\/2026",
             "student_name": "MAELLA AMAYBELLA",
-            "class_id": "12",
+            "class_name": "Grade 9",
+            "exam_type": "0",
             "term": "Term 1",
             "year": "2026",
             "subjects": [
@@ -526,13 +527,13 @@
                     "grade": "EE2"
                 }
             ],
-            "total_score": 806,
-            "position": 8
+            "total_score": 806
         },
         {
             "adm_no": "RJA\/009\/2026",
             "student_name": "QUEENSTAR KERUBO",
-            "class_id": "12",
+            "class_name": "Grade 9",
+            "exam_type": "0",
             "term": "Term 1",
             "year": "2026",
             "subjects": [
@@ -592,13 +593,13 @@
                     "grade": "EE2"
                 }
             ],
-            "total_score": 804,
-            "position": 9
+            "total_score": 804
         },
         {
             "adm_no": "RJA\/010\/2026",
             "student_name": "BONFACE ORIKI",
-            "class_id": "12",
+            "class_name": "Grade 9",
+            "exam_type": "0",
             "term": "Term 1",
             "year": "2026",
             "subjects": [
@@ -658,13 +659,13 @@
                     "grade": "EE1"
                 }
             ],
-            "total_score": 789,
-            "position": 10
+            "total_score": 789
         },
         {
             "adm_no": "RJA\/011\/2026",
             "student_name": "ESTHER NYABA",
-            "class_id": "12",
+            "class_name": "Grade 9",
+            "exam_type": "0",
             "term": "Term 1",
             "year": "2026",
             "subjects": [
@@ -724,13 +725,13 @@
                     "grade": "EE2"
                 }
             ],
-            "total_score": 770,
-            "position": 11
+            "total_score": 770
         },
         {
             "adm_no": "RJA\/013\/2026",
             "student_name": "KHALID ABDI",
-            "class_id": "12",
+            "class_name": "Grade 9",
+            "exam_type": "0",
             "term": "Term 1",
             "year": "2026",
             "subjects": [
@@ -790,13 +791,13 @@
                     "grade": "EE2"
                 }
             ],
-            "total_score": 731,
-            "position": 12
+            "total_score": 731
         },
         {
             "adm_no": "RJA\/014\/2026",
             "student_name": "NICODEMUS SBATO",
-            "class_id": "12",
+            "class_name": "Grade 9",
+            "exam_type": "0",
             "term": "Term 1",
             "year": "2026",
             "subjects": [
@@ -856,13 +857,13 @@
                     "grade": "EE2"
                 }
             ],
-            "total_score": 720,
-            "position": 13
+            "total_score": 720
         },
         {
             "adm_no": "RJA\/012\/2026",
             "student_name": "EVANCE MATIKO",
-            "class_id": "12",
+            "class_name": "Grade 9",
+            "exam_type": "0",
             "term": "Term 1",
             "year": "2026",
             "subjects": [
@@ -922,13 +923,13 @@
                     "grade": "EE2"
                 }
             ],
-            "total_score": 717,
-            "position": 14
+            "total_score": 717
         },
         {
             "adm_no": "RJA\/015\/2026",
             "student_name": "SOMAYA YUSSUF",
-            "class_id": "12",
+            "class_name": "Grade 9",
+            "exam_type": "0",
             "term": "Term 1",
             "year": "2026",
             "subjects": [
@@ -988,13 +989,13 @@
                     "grade": "EE2"
                 }
             ],
-            "total_score": 666,
-            "position": 15
+            "total_score": 666
         },
         {
             "adm_no": "RJA\/016\/2026",
             "student_name": "RUTHEL ODHIAMBO",
-            "class_id": "12",
+            "class_name": "Grade 9",
+            "exam_type": "0",
             "term": "Term 1",
             "year": "2026",
             "subjects": [
@@ -1054,13 +1055,13 @@
                     "grade": "ME1"
                 }
             ],
-            "total_score": 661,
-            "position": 16
+            "total_score": 661
         },
         {
             "adm_no": "RJA\/017\/2026",
             "student_name": "RIHANNA RASHID",
-            "class_id": "12",
+            "class_name": "Grade 9",
+            "exam_type": "0",
             "term": "Term 1",
             "year": "2026",
             "subjects": [
@@ -1120,13 +1121,13 @@
                     "grade": "ME1"
                 }
             ],
-            "total_score": 660,
-            "position": 17
+            "total_score": 660
         },
         {
             "adm_no": "RJA\/018\/2026",
             "student_name": "BRANDON OCHIENG",
-            "class_id": "12",
+            "class_name": "Grade 9",
+            "exam_type": "0",
             "term": "Term 1",
             "year": "2026",
             "subjects": [
@@ -1186,13 +1187,13 @@
                     "grade": "ME1"
                 }
             ],
-            "total_score": 655,
-            "position": 18
+            "total_score": 655
         },
         {
             "adm_no": "RJA\/020\/2026",
             "student_name": "DENG DANIEL CHOL",
-            "class_id": "12",
+            "class_name": "Grade 9",
+            "exam_type": "0",
             "term": "Term 1",
             "year": "2026",
             "subjects": [
@@ -1252,13 +1253,13 @@
                     "grade": "EE2"
                 }
             ],
-            "total_score": 640,
-            "position": 19
+            "total_score": 640
         },
         {
             "adm_no": "RJA\/019\/2026",
             "student_name": "EMMANUEL KAMOTI",
-            "class_id": "12",
+            "class_name": "Grade 9",
+            "exam_type": "0",
             "term": "Term 1",
             "year": "2026",
             "subjects": [
@@ -1318,13 +1319,13 @@
                     "grade": "ME2"
                 }
             ],
-            "total_score": 623,
-            "position": 20
+            "total_score": 623
         },
         {
             "adm_no": "RJA\/022\/2026",
             "student_name": "ALVIN KEHODO",
-            "class_id": "12",
+            "class_name": "Grade 9",
+            "exam_type": "0",
             "term": "Term 1",
             "year": "2026",
             "subjects": [
@@ -1384,13 +1385,13 @@
                     "grade": "ME2"
                 }
             ],
-            "total_score": 513,
-            "position": 21
+            "total_score": 513
         },
         {
             "adm_no": "RJA\/021\/2026",
             "student_name": "CHARLSE BOSIRE",
-            "class_id": "12",
+            "class_name": "Grade 9",
+            "exam_type": "0",
             "term": "Term 1",
             "year": "2026",
             "subjects": [
@@ -1450,13 +1451,13 @@
                     "grade": "AE2"
                 }
             ],
-            "total_score": 501,
-            "position": 22
+            "total_score": 501
         },
         {
             "adm_no": "RJA\/023\/2026",
             "student_name": "JANICE AJEMA",
-            "class_id": "12",
+            "class_name": "Grade 9",
+            "exam_type": "0",
             "term": "Term 1",
             "year": "2026",
             "subjects": [
@@ -1516,8 +1517,7 @@
                     "grade": "ME2"
                 }
             ],
-            "total_score": 446,
-            "position": 23
+            "total_score": 446
         }
     ]
 }
