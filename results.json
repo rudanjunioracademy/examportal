@@ -1,11 +1,11 @@
 {
-    "last_sync": "2026-04-29 12:12:03",
+    "last_sync": "2026-04-29 12:13:55",
     "data": [
         {
             "adm_no": "RJA\/001\/2026",
             "student_name": "DARWIN MURIANZE",
             "class_name": "Grade 9",
-            "exam_type": "0",
+            "exam_type": null,
             "term": "Term 1",
             "year": "2026",
             "subjects": [
@@ -71,7 +71,7 @@
             "adm_no": "RJA\/002\/2026",
             "student_name": "HABRAHAM OTIENO",
             "class_name": "Grade 9",
-            "exam_type": "0",
+            "exam_type": null,
             "term": "Term 1",
             "year": "2026",
             "subjects": [
@@ -137,7 +137,7 @@
             "adm_no": "RJA\/003\/2026",
             "student_name": "MITCHELLE AWINO",
             "class_name": "Grade 9",
-            "exam_type": "0",
+            "exam_type": null,
             "term": "Term 1",
             "year": "2026",
             "subjects": [
@@ -203,7 +203,7 @@
             "adm_no": "RJA\/004\/2026",
             "student_name": "JOYCE AGATTA",
             "class_name": "Grade 9",
-            "exam_type": "0",
+            "exam_type": null,
             "term": "Term 1",
             "year": "2026",
             "subjects": [
@@ -269,7 +269,7 @@
             "adm_no": "RJA\/005\/2026",
             "student_name": "CECELIA MGHOI",
             "class_name": "Grade 9",
-            "exam_type": "0",
+            "exam_type": null,
             "term": "Term 1",
             "year": "2026",
             "subjects": [
@@ -335,7 +335,7 @@
             "adm_no": "RJA\/006\/2026",
             "student_name": "GRACE NHIAL",
             "class_name": "Grade 9",
-            "exam_type": "0",
+            "exam_type": null,
             "term": "Term 1",
             "year": "2026",
             "subjects": [
@@ -401,7 +401,7 @@
             "adm_no": "RJA\/008\/2026",
             "student_name": "BRUNO OKEKA",
             "class_name": "Grade 9",
-            "exam_type": "0",
+            "exam_type": null,
             "term": "Term 1",
             "year": "2026",
             "subjects": [
@@ -467,7 +467,7 @@
             "adm_no": "RJA\/007\/2026",
             "student_name": "MAELLA AMAYBELLA",
             "class_name": "Grade 9",
-            "exam_type": "0",
+            "exam_type": null,
             "term": "Term 1",
             "year": "2026",
             "subjects": [
@@ -533,7 +533,7 @@
             "adm_no": "RJA\/009\/2026",
             "student_name": "QUEENSTAR KERUBO",
             "class_name": "Grade 9",
-            "exam_type": "0",
+            "exam_type": null,
             "term": "Term 1",
             "year": "2026",
             "subjects": [
@@ -599,7 +599,7 @@
             "adm_no": "RJA\/010\/2026",
             "student_name": "BONFACE ORIKI",
             "class_name": "Grade 9",
-            "exam_type": "0",
+            "exam_type": null,
             "term": "Term 1",
             "year": "2026",
             "subjects": [
@@ -665,7 +665,7 @@
             "adm_no": "RJA\/011\/2026",
             "student_name": "ESTHER NYABA",
             "class_name": "Grade 9",
-            "exam_type": "0",
+            "exam_type": null,
             "term": "Term 1",
             "year": "2026",
             "subjects": [
@@ -731,7 +731,7 @@
             "adm_no": "RJA\/013\/2026",
             "student_name": "KHALID ABDI",
             "class_name": "Grade 9",
-            "exam_type": "0",
+            "exam_type": null,
             "term": "Term 1",
             "year": "2026",
             "subjects": [
@@ -797,7 +797,7 @@
             "adm_no": "RJA\/014\/2026",
             "student_name": "NICODEMUS SBATO",
             "class_name": "Grade 9",
-            "exam_type": "0",
+            "exam_type": null,
             "term": "Term 1",
             "year": "2026",
             "subjects": [
@@ -863,7 +863,7 @@
             "adm_no": "RJA\/012\/2026",
             "student_name": "EVANCE MATIKO",
             "class_name": "Grade 9",
-            "exam_type": "0",
+            "exam_type": null,
             "term": "Term 1",
             "year": "2026",
             "subjects": [
@@ -929,7 +929,7 @@
             "adm_no": "RJA\/015\/2026",
             "student_name": "SOMAYA YUSSUF",
             "class_name": "Grade 9",
-            "exam_type": "0",
+            "exam_type": null,
             "term": "Term 1",
             "year": "2026",
             "subjects": [
@@ -995,7 +995,7 @@
             "adm_no": "RJA\/016\/2026",
             "student_name": "RUTHEL ODHIAMBO",
             "class_name": "Grade 9",
-            "exam_type": "0",
+            "exam_type": null,
             "term": "Term 1",
             "year": "2026",
             "subjects": [
@@ -1061,7 +1061,7 @@
             "adm_no": "RJA\/017\/2026",
             "student_name": "RIHANNA RASHID",
             "class_name": "Grade 9",
-            "exam_type": "0",
+            "exam_type": null,
             "term": "Term 1",
             "year": "2026",
             "subjects": [
@@ -1127,7 +1127,7 @@
             "adm_no": "RJA\/018\/2026",
             "student_name": "BRANDON OCHIENG",
             "class_name": "Grade 9",
-            "exam_type": "0",
+            "exam_type": null,
             "term": "Term 1",
             "year": "2026",
             "subjects": [
@@ -1193,7 +1193,7 @@
             "adm_no": "RJA\/020\/2026",
             "student_name": "DENG DANIEL CHOL",
             "class_name": "Grade 9",
-            "exam_type": "0",
+            "exam_type": null,
             "term": "Term 1",
             "year": "2026",
             "subjects": [
@@ -1259,7 +1259,7 @@
             "adm_no": "RJA\/019\/2026",
             "student_name": "EMMANUEL KAMOTI",
             "class_name": "Grade 9",
-            "exam_type": "0",
+            "exam_type": null,
             "term": "Term 1",
             "year": "2026",
             "subjects": [
@@ -1325,7 +1325,7 @@
             "adm_no": "RJA\/022\/2026",
             "student_name": "ALVIN KEHODO",
             "class_name": "Grade 9",
-            "exam_type": "0",
+            "exam_type": null,
             "term": "Term 1",
             "year": "2026",
             "subjects": [
@@ -1391,7 +1391,7 @@
             "adm_no": "RJA\/021\/2026",
             "student_name": "CHARLSE BOSIRE",
             "class_name": "Grade 9",
-            "exam_type": "0",
+            "exam_type": null,
             "term": "Term 1",
             "year": "2026",
             "subjects": [
@@ -1457,7 +1457,7 @@
             "adm_no": "RJA\/023\/2026",
             "student_name": "JANICE AJEMA",
             "class_name": "Grade 9",
-            "exam_type": "0",
+            "exam_type": null,
             "term": "Term 1",
             "year": "2026",
             "subjects": [
