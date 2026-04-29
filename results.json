@@ -1,1 +1,1523 @@
-
+{
+    "last_sync": "2026-04-29 10:39:47",
+    "data": [
+        {
+            "adm_no": "RJA\/001\/2026",
+            "student_name": "DARWIN MURIANZE",
+            "class_id": "12",
+            "term": "Term 1",
+            "year": "2026",
+            "subjects": [
+                {
+                    "name": "Agriculture ",
+                    "score": 88,
+                    "grade": "EE2"
+                },
+                {
+                    "name": "CAS",
+                    "score": 80,
+                    "grade": "EE2"
+                },
+                {
+                    "name": "Computer Studies",
+                    "score": 98,
+                    "grade": "EE1"
+                },
+                {
+                    "name": "English",
+                    "score": 89,
+                    "grade": "EE2"
+                },
+                {
+                    "name": "French",
+                    "score": 80,
+                    "grade": "EE2"
+                },
+                {
+                    "name": "Kiswahili",
+                    "score": 69,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "Mathematics",
+                    "score": 91,
+                    "grade": "EE1"
+                },
+                {
+                    "name": "Pre-Tech",
+                    "score": 86,
+                    "grade": "EE2"
+                },
+                {
+                    "name": "Religious Education",
+                    "score": 88,
+                    "grade": "EE2"
+                },
+                {
+                    "name": "Science & Technology",
+                    "score": 86,
+                    "grade": "EE2"
+                },
+                {
+                    "name": "Social Studies",
+                    "score": 97,
+                    "grade": "EE1"
+                }
+            ],
+            "total_score": 952,
+            "position": 1
+        },
+        {
+            "adm_no": "RJA\/002\/2026",
+            "student_name": "HABRAHAM OTIENO",
+            "class_id": "12",
+            "term": "Term 1",
+            "year": "2026",
+            "subjects": [
+                {
+                    "name": "Agriculture ",
+                    "score": 88,
+                    "grade": "EE2"
+                },
+                {
+                    "name": "CAS",
+                    "score": 86,
+                    "grade": "EE2"
+                },
+                {
+                    "name": "Computer Studies",
+                    "score": 94,
+                    "grade": "EE1"
+                },
+                {
+                    "name": "English",
+                    "score": 82,
+                    "grade": "EE2"
+                },
+                {
+                    "name": "French",
+                    "score": 90,
+                    "grade": "EE1"
+                },
+                {
+                    "name": "Kiswahili",
+                    "score": 73,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "Mathematics",
+                    "score": 89,
+                    "grade": "EE2"
+                },
+                {
+                    "name": "Pre-Tech",
+                    "score": 88,
+                    "grade": "EE2"
+                },
+                {
+                    "name": "Religious Education",
+                    "score": 92,
+                    "grade": "EE1"
+                },
+                {
+                    "name": "Science & Technology",
+                    "score": 78,
+                    "grade": "EE2"
+                },
+                {
+                    "name": "Social Studies",
+                    "score": 90,
+                    "grade": "EE1"
+                }
+            ],
+            "total_score": 950,
+            "position": 2
+        },
+        {
+            "adm_no": "RJA\/003\/2026",
+            "student_name": "MITCHELLE AWINO",
+            "class_id": "12",
+            "term": "Term 1",
+            "year": "2026",
+            "subjects": [
+                {
+                    "name": "Agriculture ",
+                    "score": 80,
+                    "grade": "EE2"
+                },
+                {
+                    "name": "CAS",
+                    "score": 78,
+                    "grade": "EE2"
+                },
+                {
+                    "name": "Computer Studies",
+                    "score": 80,
+                    "grade": "EE2"
+                },
+                {
+                    "name": "English",
+                    "score": 80,
+                    "grade": "EE2"
+                },
+                {
+                    "name": "French",
+                    "score": 88,
+                    "grade": "EE2"
+                },
+                {
+                    "name": "Kiswahili",
+                    "score": 78,
+                    "grade": "EE2"
+                },
+                {
+                    "name": "Mathematics",
+                    "score": 70,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "Pre-Tech",
+                    "score": 82,
+                    "grade": "EE2"
+                },
+                {
+                    "name": "Religious Education",
+                    "score": 96,
+                    "grade": "EE1"
+                },
+                {
+                    "name": "Science & Technology",
+                    "score": 88,
+                    "grade": "EE2"
+                },
+                {
+                    "name": "Social Studies",
+                    "score": 93,
+                    "grade": "EE1"
+                }
+            ],
+            "total_score": 913,
+            "position": 3
+        },
+        {
+            "adm_no": "RJA\/004\/2026",
+            "student_name": "JOYCE AGATTA",
+            "class_id": "12",
+            "term": "Term 1",
+            "year": "2026",
+            "subjects": [
+                {
+                    "name": "Agriculture ",
+                    "score": 82,
+                    "grade": "EE2"
+                },
+                {
+                    "name": "CAS",
+                    "score": 76,
+                    "grade": "EE2"
+                },
+                {
+                    "name": "Computer Studies",
+                    "score": 78,
+                    "grade": "EE2"
+                },
+                {
+                    "name": "English",
+                    "score": 91,
+                    "grade": "EE1"
+                },
+                {
+                    "name": "French",
+                    "score": 70,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "Kiswahili",
+                    "score": 65,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "Mathematics",
+                    "score": 60,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "Pre-Tech",
+                    "score": 92,
+                    "grade": "EE1"
+                },
+                {
+                    "name": "Religious Education",
+                    "score": 86,
+                    "grade": "EE2"
+                },
+                {
+                    "name": "Science & Technology",
+                    "score": 82,
+                    "grade": "EE2"
+                },
+                {
+                    "name": "Social Studies",
+                    "score": 80,
+                    "grade": "EE2"
+                }
+            ],
+            "total_score": 862,
+            "position": 4
+        },
+        {
+            "adm_no": "RJA\/005\/2026",
+            "student_name": "CECELIA MGHOI",
+            "class_id": "12",
+            "term": "Term 1",
+            "year": "2026",
+            "subjects": [
+                {
+                    "name": "Agriculture ",
+                    "score": 84,
+                    "grade": "EE2"
+                },
+                {
+                    "name": "CAS",
+                    "score": 84,
+                    "grade": "EE2"
+                },
+                {
+                    "name": "Computer Studies",
+                    "score": 80,
+                    "grade": "EE2"
+                },
+                {
+                    "name": "English",
+                    "score": 82,
+                    "grade": "EE2"
+                },
+                {
+                    "name": "French",
+                    "score": 67,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "Kiswahili",
+                    "score": 52,
+                    "grade": "ME2"
+                },
+                {
+                    "name": "Mathematics",
+                    "score": 64,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "Pre-Tech",
+                    "score": 88,
+                    "grade": "EE2"
+                },
+                {
+                    "name": "Religious Education",
+                    "score": 86,
+                    "grade": "EE2"
+                },
+                {
+                    "name": "Science & Technology",
+                    "score": 86,
+                    "grade": "EE2"
+                },
+                {
+                    "name": "Social Studies",
+                    "score": 87,
+                    "grade": "EE2"
+                }
+            ],
+            "total_score": 860,
+            "position": 5
+        },
+        {
+            "adm_no": "RJA\/006\/2026",
+            "student_name": "GRACE NHIAL",
+            "class_id": "12",
+            "term": "Term 1",
+            "year": "2026",
+            "subjects": [
+                {
+                    "name": "Agriculture ",
+                    "score": 90,
+                    "grade": "EE1"
+                },
+                {
+                    "name": "CAS",
+                    "score": 82,
+                    "grade": "EE2"
+                },
+                {
+                    "name": "Computer Studies",
+                    "score": 70,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "English",
+                    "score": 75,
+                    "grade": "EE2"
+                },
+                {
+                    "name": "French",
+                    "score": 77,
+                    "grade": "EE2"
+                },
+                {
+                    "name": "Kiswahili",
+                    "score": 55,
+                    "grade": "ME2"
+                },
+                {
+                    "name": "Mathematics",
+                    "score": 69,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "Pre-Tech",
+                    "score": 82,
+                    "grade": "EE2"
+                },
+                {
+                    "name": "Religious Education",
+                    "score": 88,
+                    "grade": "EE2"
+                },
+                {
+                    "name": "Science & Technology",
+                    "score": 74,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "Social Studies",
+                    "score": 83,
+                    "grade": "EE2"
+                }
+            ],
+            "total_score": 845,
+            "position": 6
+        },
+        {
+            "adm_no": "RJA\/008\/2026",
+            "student_name": "BRUNO OKEKA",
+            "class_id": "12",
+            "term": "Term 1",
+            "year": "2026",
+            "subjects": [
+                {
+                    "name": "Agriculture ",
+                    "score": 56,
+                    "grade": "ME2"
+                },
+                {
+                    "name": "CAS",
+                    "score": 76,
+                    "grade": "EE2"
+                },
+                {
+                    "name": "Computer Studies",
+                    "score": 70,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "English",
+                    "score": 86,
+                    "grade": "EE2"
+                },
+                {
+                    "name": "French",
+                    "score": 67,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "Kiswahili",
+                    "score": 72,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "Mathematics",
+                    "score": 68,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "Pre-Tech",
+                    "score": 88,
+                    "grade": "EE2"
+                },
+                {
+                    "name": "Religious Education",
+                    "score": 78,
+                    "grade": "EE2"
+                },
+                {
+                    "name": "Science & Technology",
+                    "score": 78,
+                    "grade": "EE2"
+                },
+                {
+                    "name": "Social Studies",
+                    "score": 78,
+                    "grade": "EE2"
+                }
+            ],
+            "total_score": 817,
+            "position": 7
+        },
+        {
+            "adm_no": "RJA\/007\/2026",
+            "student_name": "MAELLA AMAYBELLA",
+            "class_id": "12",
+            "term": "Term 1",
+            "year": "2026",
+            "subjects": [
+                {
+                    "name": "Agriculture ",
+                    "score": 80,
+                    "grade": "EE2"
+                },
+                {
+                    "name": "CAS",
+                    "score": 74,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "Computer Studies",
+                    "score": 67,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "English",
+                    "score": 83,
+                    "grade": "EE2"
+                },
+                {
+                    "name": "French",
+                    "score": 56,
+                    "grade": "ME2"
+                },
+                {
+                    "name": "Kiswahili",
+                    "score": 68,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "Mathematics",
+                    "score": 47,
+                    "grade": "ME2"
+                },
+                {
+                    "name": "Pre-Tech",
+                    "score": 74,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "Religious Education",
+                    "score": 88,
+                    "grade": "EE2"
+                },
+                {
+                    "name": "Science & Technology",
+                    "score": 84,
+                    "grade": "EE2"
+                },
+                {
+                    "name": "Social Studies",
+                    "score": 85,
+                    "grade": "EE2"
+                }
+            ],
+            "total_score": 806,
+            "position": 8
+        },
+        {
+            "adm_no": "RJA\/009\/2026",
+            "student_name": "QUEENSTAR KERUBO",
+            "class_id": "12",
+            "term": "Term 1",
+            "year": "2026",
+            "subjects": [
+                {
+                    "name": "Agriculture ",
+                    "score": 80,
+                    "grade": "EE2"
+                },
+                {
+                    "name": "CAS",
+                    "score": 80,
+                    "grade": "EE2"
+                },
+                {
+                    "name": "Computer Studies",
+                    "score": 60,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "English",
+                    "score": 78,
+                    "grade": "EE2"
+                },
+                {
+                    "name": "French",
+                    "score": 67,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "Kiswahili",
+                    "score": 66,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "Mathematics",
+                    "score": 51,
+                    "grade": "ME2"
+                },
+                {
+                    "name": "Pre-Tech",
+                    "score": 80,
+                    "grade": "EE2"
+                },
+                {
+                    "name": "Religious Education",
+                    "score": 94,
+                    "grade": "EE1"
+                },
+                {
+                    "name": "Science & Technology",
+                    "score": 70,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "Social Studies",
+                    "score": 78,
+                    "grade": "EE2"
+                }
+            ],
+            "total_score": 804,
+            "position": 9
+        },
+        {
+            "adm_no": "RJA\/010\/2026",
+            "student_name": "BONFACE ORIKI",
+            "class_id": "12",
+            "term": "Term 1",
+            "year": "2026",
+            "subjects": [
+                {
+                    "name": "Agriculture ",
+                    "score": 70,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "CAS",
+                    "score": 70,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "Computer Studies",
+                    "score": 70,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "English",
+                    "score": 81,
+                    "grade": "EE2"
+                },
+                {
+                    "name": "French",
+                    "score": 60,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "Kiswahili",
+                    "score": 70,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "Mathematics",
+                    "score": 49,
+                    "grade": "ME2"
+                },
+                {
+                    "name": "Pre-Tech",
+                    "score": 80,
+                    "grade": "EE2"
+                },
+                {
+                    "name": "Religious Education",
+                    "score": 72,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "Science & Technology",
+                    "score": 74,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "Social Studies",
+                    "score": 93,
+                    "grade": "EE1"
+                }
+            ],
+            "total_score": 789,
+            "position": 10
+        },
+        {
+            "adm_no": "RJA\/011\/2026",
+            "student_name": "ESTHER NYABA",
+            "class_id": "12",
+            "term": "Term 1",
+            "year": "2026",
+            "subjects": [
+                {
+                    "name": "Agriculture ",
+                    "score": 80,
+                    "grade": "EE2"
+                },
+                {
+                    "name": "CAS",
+                    "score": 68,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "Computer Studies",
+                    "score": 60,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "English",
+                    "score": 90,
+                    "grade": "EE1"
+                },
+                {
+                    "name": "French",
+                    "score": 50,
+                    "grade": "ME2"
+                },
+                {
+                    "name": "Kiswahili",
+                    "score": 52,
+                    "grade": "ME2"
+                },
+                {
+                    "name": "Mathematics",
+                    "score": 69,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "Pre-Tech",
+                    "score": 76,
+                    "grade": "EE2"
+                },
+                {
+                    "name": "Religious Education",
+                    "score": 84,
+                    "grade": "EE2"
+                },
+                {
+                    "name": "Science & Technology",
+                    "score": 66,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "Social Studies",
+                    "score": 75,
+                    "grade": "EE2"
+                }
+            ],
+            "total_score": 770,
+            "position": 11
+        },
+        {
+            "adm_no": "RJA\/013\/2026",
+            "student_name": "KHALID ABDI",
+            "class_id": "12",
+            "term": "Term 1",
+            "year": "2026",
+            "subjects": [
+                {
+                    "name": "Agriculture ",
+                    "score": 70,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "CAS",
+                    "score": 68,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "Computer Studies",
+                    "score": 60,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "English",
+                    "score": 72,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "French",
+                    "score": 66,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "Kiswahili",
+                    "score": 40,
+                    "grade": "AE1"
+                },
+                {
+                    "name": "Mathematics",
+                    "score": 64,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "Pre-Tech",
+                    "score": 70,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "Religious Education",
+                    "score": 71,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "Science & Technology",
+                    "score": 68,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "Social Studies",
+                    "score": 82,
+                    "grade": "EE2"
+                }
+            ],
+            "total_score": 731,
+            "position": 12
+        },
+        {
+            "adm_no": "RJA\/014\/2026",
+            "student_name": "NICODEMUS SBATO",
+            "class_id": "12",
+            "term": "Term 1",
+            "year": "2026",
+            "subjects": [
+                {
+                    "name": "Agriculture ",
+                    "score": 76,
+                    "grade": "EE2"
+                },
+                {
+                    "name": "CAS",
+                    "score": 62,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "Computer Studies",
+                    "score": 77,
+                    "grade": "EE2"
+                },
+                {
+                    "name": "English",
+                    "score": 73,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "French",
+                    "score": 66,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "Kiswahili",
+                    "score": 45,
+                    "grade": "ME2"
+                },
+                {
+                    "name": "Mathematics",
+                    "score": 41,
+                    "grade": "ME2"
+                },
+                {
+                    "name": "Pre-Tech",
+                    "score": 66,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "Religious Education",
+                    "score": 68,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "Science & Technology",
+                    "score": 66,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "Social Studies",
+                    "score": 80,
+                    "grade": "EE2"
+                }
+            ],
+            "total_score": 720,
+            "position": 13
+        },
+        {
+            "adm_no": "RJA\/012\/2026",
+            "student_name": "EVANCE MATIKO",
+            "class_id": "12",
+            "term": "Term 1",
+            "year": "2026",
+            "subjects": [
+                {
+                    "name": "Agriculture ",
+                    "score": 76,
+                    "grade": "EE2"
+                },
+                {
+                    "name": "CAS",
+                    "score": 68,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "Computer Studies",
+                    "score": 50,
+                    "grade": "ME2"
+                },
+                {
+                    "name": "English",
+                    "score": 70,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "French",
+                    "score": 55,
+                    "grade": "ME2"
+                },
+                {
+                    "name": "Kiswahili",
+                    "score": 54,
+                    "grade": "ME2"
+                },
+                {
+                    "name": "Mathematics",
+                    "score": 49,
+                    "grade": "ME2"
+                },
+                {
+                    "name": "Pre-Tech",
+                    "score": 76,
+                    "grade": "EE2"
+                },
+                {
+                    "name": "Religious Education",
+                    "score": 74,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "Science & Technology",
+                    "score": 62,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "Social Studies",
+                    "score": 83,
+                    "grade": "EE2"
+                }
+            ],
+            "total_score": 717,
+            "position": 14
+        },
+        {
+            "adm_no": "RJA\/015\/2026",
+            "student_name": "SOMAYA YUSSUF",
+            "class_id": "12",
+            "term": "Term 1",
+            "year": "2026",
+            "subjects": [
+                {
+                    "name": "Agriculture ",
+                    "score": 70,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "CAS",
+                    "score": 74,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "Computer Studies",
+                    "score": 50,
+                    "grade": "ME2"
+                },
+                {
+                    "name": "English",
+                    "score": 83,
+                    "grade": "EE2"
+                },
+                {
+                    "name": "French",
+                    "score": 40,
+                    "grade": "AE1"
+                },
+                {
+                    "name": "Kiswahili",
+                    "score": 25,
+                    "grade": "AE2"
+                },
+                {
+                    "name": "Mathematics",
+                    "score": 34,
+                    "grade": "AE1"
+                },
+                {
+                    "name": "Pre-Tech",
+                    "score": 70,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "Religious Education",
+                    "score": 68,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "Science & Technology",
+                    "score": 74,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "Social Studies",
+                    "score": 78,
+                    "grade": "EE2"
+                }
+            ],
+            "total_score": 666,
+            "position": 15
+        },
+        {
+            "adm_no": "RJA\/016\/2026",
+            "student_name": "RUTHEL ODHIAMBO",
+            "class_id": "12",
+            "term": "Term 1",
+            "year": "2026",
+            "subjects": [
+                {
+                    "name": "Agriculture ",
+                    "score": 64,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "CAS",
+                    "score": 62,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "Computer Studies",
+                    "score": 54,
+                    "grade": "ME2"
+                },
+                {
+                    "name": "English",
+                    "score": 72,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "French",
+                    "score": 45,
+                    "grade": "ME2"
+                },
+                {
+                    "name": "Kiswahili",
+                    "score": 53,
+                    "grade": "ME2"
+                },
+                {
+                    "name": "Mathematics",
+                    "score": 37,
+                    "grade": "AE1"
+                },
+                {
+                    "name": "Pre-Tech",
+                    "score": 72,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "Religious Education",
+                    "score": 70,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "Science & Technology",
+                    "score": 74,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "Social Studies",
+                    "score": 58,
+                    "grade": "ME1"
+                }
+            ],
+            "total_score": 661,
+            "position": 16
+        },
+        {
+            "adm_no": "RJA\/017\/2026",
+            "student_name": "RIHANNA RASHID",
+            "class_id": "12",
+            "term": "Term 1",
+            "year": "2026",
+            "subjects": [
+                {
+                    "name": "Agriculture ",
+                    "score": 50,
+                    "grade": "ME2"
+                },
+                {
+                    "name": "CAS",
+                    "score": 46,
+                    "grade": "ME2"
+                },
+                {
+                    "name": "Computer Studies",
+                    "score": 60,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "English",
+                    "score": 88,
+                    "grade": "EE2"
+                },
+                {
+                    "name": "French",
+                    "score": 50,
+                    "grade": "ME2"
+                },
+                {
+                    "name": "Kiswahili",
+                    "score": 64,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "Mathematics",
+                    "score": 57,
+                    "grade": "ME2"
+                },
+                {
+                    "name": "Pre-Tech",
+                    "score": 62,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "Religious Education",
+                    "score": 33,
+                    "grade": "AE1"
+                },
+                {
+                    "name": "Science & Technology",
+                    "score": 82,
+                    "grade": "EE2"
+                },
+                {
+                    "name": "Social Studies",
+                    "score": 68,
+                    "grade": "ME1"
+                }
+            ],
+            "total_score": 660,
+            "position": 17
+        },
+        {
+            "adm_no": "RJA\/018\/2026",
+            "student_name": "BRANDON OCHIENG",
+            "class_id": "12",
+            "term": "Term 1",
+            "year": "2026",
+            "subjects": [
+                {
+                    "name": "Agriculture ",
+                    "score": 64,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "CAS",
+                    "score": 68,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "Computer Studies",
+                    "score": 66,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "English",
+                    "score": 72,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "French",
+                    "score": 60,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "Kiswahili",
+                    "score": 41,
+                    "grade": "ME2"
+                },
+                {
+                    "name": "Mathematics",
+                    "score": 24,
+                    "grade": "AE2"
+                },
+                {
+                    "name": "Pre-Tech",
+                    "score": 72,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "Religious Education",
+                    "score": 56,
+                    "grade": "ME2"
+                },
+                {
+                    "name": "Science & Technology",
+                    "score": 64,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "Social Studies",
+                    "score": 68,
+                    "grade": "ME1"
+                }
+            ],
+            "total_score": 655,
+            "position": 18
+        },
+        {
+            "adm_no": "RJA\/020\/2026",
+            "student_name": "DENG DANIEL CHOL",
+            "class_id": "12",
+            "term": "Term 1",
+            "year": "2026",
+            "subjects": [
+                {
+                    "name": "Agriculture ",
+                    "score": 78,
+                    "grade": "EE2"
+                },
+                {
+                    "name": "CAS",
+                    "score": 50,
+                    "grade": "ME2"
+                },
+                {
+                    "name": "Computer Studies",
+                    "score": 67,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "English",
+                    "score": 74,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "French",
+                    "score": 55,
+                    "grade": "ME2"
+                },
+                {
+                    "name": "Kiswahili",
+                    "score": 24,
+                    "grade": "AE2"
+                },
+                {
+                    "name": "Mathematics",
+                    "score": 21,
+                    "grade": "AE2"
+                },
+                {
+                    "name": "Pre-Tech",
+                    "score": 70,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "Religious Education",
+                    "score": 74,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "Science & Technology",
+                    "score": 50,
+                    "grade": "ME2"
+                },
+                {
+                    "name": "Social Studies",
+                    "score": 77,
+                    "grade": "EE2"
+                }
+            ],
+            "total_score": 640,
+            "position": 19
+        },
+        {
+            "adm_no": "RJA\/019\/2026",
+            "student_name": "EMMANUEL KAMOTI",
+            "class_id": "12",
+            "term": "Term 1",
+            "year": "2026",
+            "subjects": [
+                {
+                    "name": "Agriculture ",
+                    "score": 74,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "CAS",
+                    "score": 58,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "Computer Studies",
+                    "score": 50,
+                    "grade": "ME2"
+                },
+                {
+                    "name": "English",
+                    "score": 71,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "French",
+                    "score": 50,
+                    "grade": "ME2"
+                },
+                {
+                    "name": "Kiswahili",
+                    "score": 53,
+                    "grade": "ME2"
+                },
+                {
+                    "name": "Mathematics",
+                    "score": 20,
+                    "grade": "BE1"
+                },
+                {
+                    "name": "Pre-Tech",
+                    "score": 72,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "Religious Education",
+                    "score": 52,
+                    "grade": "ME2"
+                },
+                {
+                    "name": "Science & Technology",
+                    "score": 68,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "Social Studies",
+                    "score": 55,
+                    "grade": "ME2"
+                }
+            ],
+            "total_score": 623,
+            "position": 20
+        },
+        {
+            "adm_no": "RJA\/022\/2026",
+            "student_name": "ALVIN KEHODO",
+            "class_id": "12",
+            "term": "Term 1",
+            "year": "2026",
+            "subjects": [
+                {
+                    "name": "Agriculture ",
+                    "score": 50,
+                    "grade": "ME2"
+                },
+                {
+                    "name": "CAS",
+                    "score": 56,
+                    "grade": "ME2"
+                },
+                {
+                    "name": "Computer Studies",
+                    "score": 45,
+                    "grade": "ME2"
+                },
+                {
+                    "name": "English",
+                    "score": 75,
+                    "grade": "EE2"
+                },
+                {
+                    "name": "French",
+                    "score": 48,
+                    "grade": "ME2"
+                },
+                {
+                    "name": "Kiswahili",
+                    "score": 33,
+                    "grade": "AE1"
+                },
+                {
+                    "name": "Mathematics",
+                    "score": 21,
+                    "grade": "AE2"
+                },
+                {
+                    "name": "Pre-Tech",
+                    "score": 44,
+                    "grade": "ME2"
+                },
+                {
+                    "name": "Religious Education",
+                    "score": 36,
+                    "grade": "AE1"
+                },
+                {
+                    "name": "Science & Technology",
+                    "score": 48,
+                    "grade": "ME2"
+                },
+                {
+                    "name": "Social Studies",
+                    "score": 57,
+                    "grade": "ME2"
+                }
+            ],
+            "total_score": 513,
+            "position": 21
+        },
+        {
+            "adm_no": "RJA\/021\/2026",
+            "student_name": "CHARLSE BOSIRE",
+            "class_id": "12",
+            "term": "Term 1",
+            "year": "2026",
+            "subjects": [
+                {
+                    "name": "Agriculture ",
+                    "score": 64,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "CAS",
+                    "score": 66,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "Computer Studies",
+                    "score": 30,
+                    "grade": "AE2"
+                },
+                {
+                    "name": "English",
+                    "score": 45,
+                    "grade": "ME2"
+                },
+                {
+                    "name": "French",
+                    "score": 21,
+                    "grade": "AE2"
+                },
+                {
+                    "name": "Kiswahili",
+                    "score": 24,
+                    "grade": "AE2"
+                },
+                {
+                    "name": "Mathematics",
+                    "score": 33,
+                    "grade": "AE1"
+                },
+                {
+                    "name": "Pre-Tech",
+                    "score": 54,
+                    "grade": "ME2"
+                },
+                {
+                    "name": "Religious Education",
+                    "score": 68,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "Science & Technology",
+                    "score": 66,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "Social Studies",
+                    "score": 30,
+                    "grade": "AE2"
+                }
+            ],
+            "total_score": 501,
+            "position": 22
+        },
+        {
+            "adm_no": "RJA\/023\/2026",
+            "student_name": "JANICE AJEMA",
+            "class_id": "12",
+            "term": "Term 1",
+            "year": "2026",
+            "subjects": [
+                {
+                    "name": "Agriculture ",
+                    "score": 50,
+                    "grade": "ME2"
+                },
+                {
+                    "name": "CAS",
+                    "score": 32,
+                    "grade": "AE1"
+                },
+                {
+                    "name": "Computer Studies",
+                    "score": 40,
+                    "grade": "AE1"
+                },
+                {
+                    "name": "English",
+                    "score": 61,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "French",
+                    "score": 43,
+                    "grade": "ME2"
+                },
+                {
+                    "name": "Kiswahili",
+                    "score": 23,
+                    "grade": "AE2"
+                },
+                {
+                    "name": "Mathematics",
+                    "score": 14,
+                    "grade": "BE1"
+                },
+                {
+                    "name": "Pre-Tech",
+                    "score": 54,
+                    "grade": "ME2"
+                },
+                {
+                    "name": "Religious Education",
+                    "score": 38,
+                    "grade": "AE1"
+                },
+                {
+                    "name": "Science & Technology",
+                    "score": 48,
+                    "grade": "ME2"
+                },
+                {
+                    "name": "Social Studies",
+                    "score": 43,
+                    "grade": "ME2"
+                }
+            ],
+            "total_score": 446,
+            "position": 23
+        }
+    ]
+}
