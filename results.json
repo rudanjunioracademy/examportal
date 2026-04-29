@@ -1,4 +1,76 @@
 {
-    "last_sync": "2026-04-29 08:19:46",
-    "data": []
+    "last_sync": "2026-04-29 08:34:28",
+    "data": [
+        {
+            "adm_no": "RJA\/004\/2026",
+            "student_name": "ABUK ARUK DENG",
+            "class_id": "8",
+            "term": "Term 1",
+            "year": "2026",
+            "subjects": [
+                {
+                    "name": "Mathematics",
+                    "score": 44,
+                    "grade": "ME2"
+                },
+                {
+                    "name": "English",
+                    "score": 66,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "Kiswahili",
+                    "score": 77,
+                    "grade": "EE2"
+                },
+                {
+                    "name": "Science & Technology",
+                    "score": 66,
+                    "grade": "ME1"
+                },
+                {
+                    "name": "Social Studies",
+                    "score": 55,
+                    "grade": "ME2"
+                },
+                {
+                    "name": "Computer Studies",
+                    "score": 44,
+                    "grade": "ME2"
+                },
+                {
+                    "name": "French",
+                    "score": 33,
+                    "grade": "AE1"
+                },
+                {
+                    "name": "Music",
+                    "score": 22,
+                    "grade": "AE2"
+                },
+                {
+                    "name": "CAS",
+                    "score": 33,
+                    "grade": "AE1"
+                },
+                {
+                    "name": "PHE",
+                    "score": 33,
+                    "grade": "AE1"
+                },
+                {
+                    "name": "Religious Education",
+                    "score": 33,
+                    "grade": "AE1"
+                },
+                {
+                    "name": "Agriculture ",
+                    "score": 44,
+                    "grade": "ME2"
+                }
+            ],
+            "total_score": 550,
+            "position": 1
+        }
+    ]
 }
