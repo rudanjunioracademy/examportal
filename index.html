@@ -82,13 +82,6 @@
 
         #printArea { background: white; padding: 20px; }
 
-        .writing-line {
-            border-bottom: 1px solid #ccc;
-            height: 30px;
-            margin-bottom: 5px;
-            width: 100%;
-        }
-
         .sig-box {
             border: 1px dashed #cbd5e1;
             height: 80px; 
@@ -115,60 +108,23 @@
             display: block;
         }
 
-        /* UPDATED PRINT LOGIC FOR A4 AND NAVY BORDER */
         @media print {
-            @page { 
-                size: A4; 
-                margin: 0; /* Removing page margins to control via CSS */
-            }
-            html, body {
-                height: 100%;
-                margin: 0 !important;
-                padding: 0 !important;
-                overflow: hidden;
-            }
-            .modal-header, .modal-footer, .d-print-none, .login-card, .academic-bg { 
-                display: none !important; 
-            }
-            .modal { 
-                position: absolute; 
-                left: 0; 
-                top: 0; 
-                display: block !important; 
-                width: 210mm;
-                height: 297mm;
-            }
-            .modal-dialog { 
-                max-width: 100% !important; 
-                width: 100% !important;
-                margin: 0 !important; 
-                padding: 0 !important;
-            }
-            .modal-content { 
-                border: none !important; 
-                box-shadow: none !important; 
-                height: 297mm;
-                width: 210mm;
-            }
+            @page { size: A4; margin: 0; }
+            html, body { height: 100%; margin: 0 !important; padding: 0 !important; overflow: hidden; }
+            .modal-header, .modal-footer, .d-print-none, .login-card, .academic-bg { display: none !important; }
+            .modal { position: absolute; left: 0; top: 0; display: block !important; width: 210mm; height: 297mm; }
+            .modal-dialog { max-width: 100% !important; width: 100% !important; margin: 0 !important; padding: 0 !important; }
+            .modal-content { border: none !important; box-shadow: none !important; height: 297mm; width: 210mm; }
             #printArea { 
                 padding: 10mm !important; 
                 width: 210mm;
                 height: 297mm;
                 box-sizing: border-box;
-                border: 8px solid navy !important; /* Navy Blue Border */
+                border: 8px solid #064e3b !important;
                 display: flex;
                 flex-direction: column;
             }
-            .table { 
-                width: 100% !important; 
-                margin-bottom: 10px !important;
-            }
-            .table-responsive {
-                overflow: hidden !important;
-            }
-            /* Tighten spacing for single page fit */
-            h4, h6, p, label { margin-bottom: 2px !important; }
-            .row { margin-bottom: 8px !important; }
+            .table { width: 100% !important; margin-bottom: 10px !important; }
         }
     </style>
 </head>
@@ -227,20 +183,20 @@
                 <div class="row mb-3 text-center">
                     <div class="col-3">
                         <div class="p-2 bg-light rounded">
-                            <small class="text-muted d-block text-uppercase fw-bold" style="font-size: 8px;">Grade</small>
-                            <span class="small fw-bold" id="mStudentClass">---</span>
+                            <small class="text-muted d-block text-uppercase fw-bold" style="font-size: 8px;">Class</small>
+                            <span class="small fw-bold" id="mStudentClassName">---</span>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="p-2 bg-light rounded">
+                            <small class="text-muted d-block text-uppercase fw-bold" style="font-size: 8px;">Exam Type</small>
+                            <span class="small fw-bold text-danger" id="mExamType">---</span>
                         </div>
                     </div>
                     <div class="col-3">
                         <div class="p-2 bg-light rounded">
                             <small class="text-muted d-block text-uppercase fw-bold" style="font-size: 8px;">Total Score</small>
                             <span class="small fw-bold text-primary" id="mTotalScore">0</span>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="p-2 bg-light rounded">
-                            <small class="text-muted d-block text-uppercase fw-bold" style="font-size: 8px;">Position</small>
-                            <span class="small fw-bold text-danger" id="mPosition">---</span>
                         </div>
                     </div>
                     <div class="col-3">
@@ -306,13 +262,11 @@
         for (let i = 0; i < count; i++) {
             const item = document.createElement('i');
             const icon = icons[Math.floor(Math.random() * icons.length)];
-            
             item.className = `fas ${icon} floating-item`;
             item.style.left = `${Math.random() * 100}%`;
             item.style.fontSize = `${Math.random() * (30 - 15) + 15}px`;
             item.style.animationDuration = `${Math.random() * (15 - 8) + 8}s`;
             item.style.animationDelay = `${Math.random() * 5}s`;
-            
             bg.appendChild(item);
         }
     }
@@ -340,9 +294,22 @@
         if (student) {
             document.getElementById('mStudentName').innerText = student.student_name;
             document.getElementById('mStudentAdm').innerText = student.adm_no;
-            document.getElementById('mStudentClass').innerText = "Grade " + (student.class_id || 'N/A');
+            document.getElementById('mStudentClassName').innerText = student.class_name || "N/A";
+            
+            // Map the raw exam type ID/code to the correct display name
+            const examTypeMapping = {
+                "opener": "Opener Exam",
+                "mid": "Mid Term",
+                "end": "End Term",
+                "opener_exam": "Opener Exam",
+                "mid_term": "Mid Term",
+                "end_term": "End Term"
+            };
+            
+            const rawExamType = (student.exam_type || "end").toLowerCase();
+            document.getElementById('mExamType').innerText = examTypeMapping[rawExamType] || student.exam_type || "End Term";
+            
             document.getElementById('mTotalScore').innerText = student.total_score;
-            document.getElementById('mPosition').innerText = student.position;
             document.getElementById('mStudentTerm').innerText = student.term + " " + student.year;
 
             const body = document.getElementById('tableBody');
