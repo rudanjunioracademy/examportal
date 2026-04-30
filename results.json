@@ -1,11 +1,12 @@
 {
-    "last_sync": "2026-04-30 13:12:20",
+    "last_sync": "2026-04-30 14:18:42",
+    "frozen_students": [],
     "data": [
         {
             "adm_no": "RJA\/001\/2026",
             "student_name": "DARWIN MURIANZE",
             "class_name": "Grade 9",
-            "exam_type": null,
+            "exam_type": "0",
             "term": "Term 1",
             "year": "2026",
             "subjects": [
@@ -65,13 +66,14 @@
                     "grade": "EE1"
                 }
             ],
-            "total_score": 952
+            "total_score": 952,
+            "is_frozen": false
         },
         {
             "adm_no": "RJA\/002\/2026",
             "student_name": "HABRAHAM OTIENO",
             "class_name": "Grade 9",
-            "exam_type": null,
+            "exam_type": "0",
             "term": "Term 1",
             "year": "2026",
             "subjects": [
@@ -131,13 +133,14 @@
                     "grade": "EE1"
                 }
             ],
-            "total_score": 950
+            "total_score": 950,
+            "is_frozen": false
         },
         {
             "adm_no": "RJA\/003\/2026",
             "student_name": "MITCHELLE AWINO",
             "class_name": "Grade 9",
-            "exam_type": null,
+            "exam_type": "0",
             "term": "Term 1",
             "year": "2026",
             "subjects": [
@@ -197,13 +200,14 @@
                     "grade": "EE1"
                 }
             ],
-            "total_score": 913
+            "total_score": 913,
+            "is_frozen": false
         },
         {
             "adm_no": "RJA\/004\/2026",
             "student_name": "JOYCE AGATTA",
             "class_name": "Grade 9",
-            "exam_type": null,
+            "exam_type": "0",
             "term": "Term 1",
             "year": "2026",
             "subjects": [
@@ -263,13 +267,14 @@
                     "grade": "EE2"
                 }
             ],
-            "total_score": 862
+            "total_score": 862,
+            "is_frozen": false
         },
         {
             "adm_no": "RJA\/005\/2026",
             "student_name": "CECELIA MGHOI",
             "class_name": "Grade 9",
-            "exam_type": null,
+            "exam_type": "0",
             "term": "Term 1",
             "year": "2026",
             "subjects": [
@@ -329,13 +334,14 @@
                     "grade": "EE2"
                 }
             ],
-            "total_score": 860
+            "total_score": 860,
+            "is_frozen": false
         },
         {
             "adm_no": "RJA\/006\/2026",
             "student_name": "GRACE NHIAL",
             "class_name": "Grade 9",
-            "exam_type": null,
+            "exam_type": "0",
             "term": "Term 1",
             "year": "2026",
             "subjects": [
@@ -395,13 +401,14 @@
                     "grade": "EE2"
                 }
             ],
-            "total_score": 845
+            "total_score": 845,
+            "is_frozen": false
         },
         {
             "adm_no": "RJA\/008\/2026",
             "student_name": "BRUNO OKEKA",
             "class_name": "Grade 9",
-            "exam_type": null,
+            "exam_type": "0",
             "term": "Term 1",
             "year": "2026",
             "subjects": [
@@ -461,13 +468,14 @@
                     "grade": "EE2"
                 }
             ],
-            "total_score": 817
+            "total_score": 817,
+            "is_frozen": false
         },
         {
             "adm_no": "RJA\/007\/2026",
             "student_name": "MAELLA AMAYBELLA",
             "class_name": "Grade 9",
-            "exam_type": null,
+            "exam_type": "0",
             "term": "Term 1",
             "year": "2026",
             "subjects": [
@@ -527,13 +535,14 @@
                     "grade": "EE2"
                 }
             ],
-            "total_score": 806
+            "total_score": 806,
+            "is_frozen": false
         },
         {
             "adm_no": "RJA\/009\/2026",
             "student_name": "QUEENSTAR KERUBO",
             "class_name": "Grade 9",
-            "exam_type": null,
+            "exam_type": "0",
             "term": "Term 1",
             "year": "2026",
             "subjects": [
@@ -593,13 +602,14 @@
                     "grade": "EE2"
                 }
             ],
-            "total_score": 804
+            "total_score": 804,
+            "is_frozen": false
         },
         {
             "adm_no": "RJA\/010\/2026",
             "student_name": "BONFACE ORIKI",
             "class_name": "Grade 9",
-            "exam_type": null,
+            "exam_type": "0",
             "term": "Term 1",
             "year": "2026",
             "subjects": [
@@ -659,13 +669,14 @@
                     "grade": "EE1"
                 }
             ],
-            "total_score": 789
+            "total_score": 789,
+            "is_frozen": false
         },
         {
             "adm_no": "RJA\/011\/2026",
             "student_name": "ESTHER NYABA",
             "class_name": "Grade 9",
-            "exam_type": null,
+            "exam_type": "0",
             "term": "Term 1",
             "year": "2026",
             "subjects": [
@@ -725,13 +736,14 @@
                     "grade": "EE2"
                 }
             ],
-            "total_score": 770
+            "total_score": 770,
+            "is_frozen": false
         },
         {
             "adm_no": "RJA\/013\/2026",
             "student_name": "KHALID ABDI",
             "class_name": "Grade 9",
-            "exam_type": null,
+            "exam_type": "0",
             "term": "Term 1",
             "year": "2026",
             "subjects": [
@@ -791,13 +803,14 @@
                     "grade": "EE2"
                 }
             ],
-            "total_score": 731
+            "total_score": 731,
+            "is_frozen": false
         },
         {
             "adm_no": "RJA\/014\/2026",
             "student_name": "NICODEMUS SBATO",
             "class_name": "Grade 9",
-            "exam_type": null,
+            "exam_type": "0",
             "term": "Term 1",
             "year": "2026",
             "subjects": [
@@ -857,13 +870,14 @@
                     "grade": "EE2"
                 }
             ],
-            "total_score": 720
+            "total_score": 720,
+            "is_frozen": false
         },
         {
             "adm_no": "RJA\/012\/2026",
             "student_name": "EVANCE MATIKO",
             "class_name": "Grade 9",
-            "exam_type": null,
+            "exam_type": "0",
             "term": "Term 1",
             "year": "2026",
             "subjects": [
@@ -923,13 +937,14 @@
                     "grade": "EE2"
                 }
             ],
-            "total_score": 717
+            "total_score": 717,
+            "is_frozen": false
         },
         {
             "adm_no": "RJA\/015\/2026",
             "student_name": "SOMAYA YUSSUF",
             "class_name": "Grade 9",
-            "exam_type": null,
+            "exam_type": "0",
             "term": "Term 1",
             "year": "2026",
             "subjects": [
@@ -989,13 +1004,14 @@
                     "grade": "EE2"
                 }
             ],
-            "total_score": 666
+            "total_score": 666,
+            "is_frozen": false
         },
         {
             "adm_no": "RJA\/016\/2026",
             "student_name": "RUTHEL ODHIAMBO",
             "class_name": "Grade 9",
-            "exam_type": null,
+            "exam_type": "0",
             "term": "Term 1",
             "year": "2026",
             "subjects": [
@@ -1055,13 +1071,14 @@
                     "grade": "ME1"
                 }
             ],
-            "total_score": 661
+            "total_score": 661,
+            "is_frozen": false
         },
         {
             "adm_no": "RJA\/017\/2026",
             "student_name": "RIHANNA RASHID",
             "class_name": "Grade 9",
-            "exam_type": null,
+            "exam_type": "0",
             "term": "Term 1",
             "year": "2026",
             "subjects": [
@@ -1121,13 +1138,14 @@
                     "grade": "ME1"
                 }
             ],
-            "total_score": 660
+            "total_score": 660,
+            "is_frozen": false
         },
         {
             "adm_no": "RJA\/018\/2026",
             "student_name": "BRANDON OCHIENG",
             "class_name": "Grade 9",
-            "exam_type": null,
+            "exam_type": "0",
             "term": "Term 1",
             "year": "2026",
             "subjects": [
@@ -1187,13 +1205,14 @@
                     "grade": "ME1"
                 }
             ],
-            "total_score": 655
+            "total_score": 655,
+            "is_frozen": false
         },
         {
             "adm_no": "RJA\/020\/2026",
             "student_name": "DENG DANIEL CHOL",
             "class_name": "Grade 9",
-            "exam_type": null,
+            "exam_type": "0",
             "term": "Term 1",
             "year": "2026",
             "subjects": [
@@ -1253,13 +1272,14 @@
                     "grade": "EE2"
                 }
             ],
-            "total_score": 640
+            "total_score": 640,
+            "is_frozen": false
         },
         {
             "adm_no": "RJA\/019\/2026",
             "student_name": "EMMANUEL KAMOTI",
             "class_name": "Grade 9",
-            "exam_type": null,
+            "exam_type": "0",
             "term": "Term 1",
             "year": "2026",
             "subjects": [
@@ -1319,13 +1339,14 @@
                     "grade": "ME2"
                 }
             ],
-            "total_score": 623
+            "total_score": 623,
+            "is_frozen": false
         },
         {
             "adm_no": "RJA\/022\/2026",
             "student_name": "ALVIN KEHODO",
             "class_name": "Grade 9",
-            "exam_type": null,
+            "exam_type": "0",
             "term": "Term 1",
             "year": "2026",
             "subjects": [
@@ -1385,13 +1406,14 @@
                     "grade": "ME2"
                 }
             ],
-            "total_score": 513
+            "total_score": 513,
+            "is_frozen": false
         },
         {
             "adm_no": "RJA\/021\/2026",
             "student_name": "CHARLSE BOSIRE",
             "class_name": "Grade 9",
-            "exam_type": null,
+            "exam_type": "0",
             "term": "Term 1",
             "year": "2026",
             "subjects": [
@@ -1451,13 +1473,14 @@
                     "grade": "AE2"
                 }
             ],
-            "total_score": 501
+            "total_score": 501,
+            "is_frozen": false
         },
         {
             "adm_no": "RJA\/023\/2026",
             "student_name": "JANICE AJEMA",
             "class_name": "Grade 9",
-            "exam_type": null,
+            "exam_type": "0",
             "term": "Term 1",
             "year": "2026",
             "subjects": [
@@ -1517,7 +1540,8 @@
                     "grade": "ME2"
                 }
             ],
-            "total_score": 446
+            "total_score": 446,
+            "is_frozen": false
         }
     ]
 }
