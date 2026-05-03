@@ -108,10 +108,51 @@
             display: block;
         }
 
+        /* Alumnae Graduation Overlay Style */
+        #gradOverlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            backdrop-filter: blur(8px);
+        }
+
+        .grad-window {
+            background: #dcfce7;
+            border: 5px solid #059669;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 0 50px rgba(5, 150, 105, 0.5);
+            max-width: 90%;
+            transform: scale(0.8);
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .grad-window.active { transform: scale(1); }
+
+        .grad-text {
+            color: #dc3545;
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 0px rgba(0,0,0,0.1);
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
         @media print {
             @page { size: A4; margin: 0; }
             html, body { height: 100%; margin: 0 !important; padding: 0 !important; overflow: hidden; }
-            .modal-header, .modal-footer, .d-print-none, .login-card, .academic-bg { display: none !important; }
+            .modal-header, .modal-footer, .d-print-none, .login-card, .academic-bg, #gradOverlay { display: none !important; }
             .modal { position: absolute; left: 0; top: 0; display: block !important; width: 210mm; height: 297mm; }
             .modal-dialog { max-width: 100% !important; width: 100% !important; margin: 0 !important; padding: 0 !important; }
             .modal-content { border: none !important; box-shadow: none !important; height: 297mm; width: 210mm; }
@@ -131,6 +172,16 @@
 <body>
 
 <div class="academic-bg" id="academicBg"></div>
+
+<!-- Graduation Popup Window -->
+<div id="gradOverlay" onclick="closeGrad()">
+    <div class="grad-window" id="gradWindow">
+        <i class="fas fa-graduation-cap mb-3" style="font-size: 4rem; color: #059669;"></i>
+        <h1 class="grad-text">FINISHED JUNIOR SCHOOL</h1>
+        <p class="text-dark fw-bold">Congratulations on your achievement!</p>
+
+    </div>
+</div>
 
 <div class="login-card p-0">
     <div class="logo-container">
@@ -292,11 +343,15 @@
         const student = resultsData.find(r => r.adm_no && r.adm_no.toUpperCase() === input);
 
         if (student) {
+            // Check for Graduation/Alumnae status
+            if (student.class_name === "Alumnae" || student.is_graduated === true) {
+                showGraduationPopup();
+            }
+
             document.getElementById('mStudentName').innerText = student.student_name;
             document.getElementById('mStudentAdm').innerText = student.adm_no;
             document.getElementById('mStudentClassName').innerText = student.class_name || "N/A";
             
-            // Map the raw exam type ID/code to the correct display name
             const examTypeMapping = {
                 "opener": "Opener Exam",
                 "mid": "Mid Term",
@@ -314,16 +369,17 @@
 
             const body = document.getElementById('tableBody');
             body.innerHTML = student.subjects.map(item => {
-                const g = item.grade.toLowerCase();
+                const g = (item.grade || "").toLowerCase();
                 let cssClass = 'be';
                 if (g.startsWith('ee')) cssClass = 'ee';
                 else if (g.startsWith('me')) cssClass = 'me';
                 else if (g.startsWith('ae')) cssClass = 'ae';
+                else if (g.includes('finished')) cssClass = 'ee'; // Green highlight for grad status
 
                 return `
                 <tr>
                     <td class="fw-bold">${item.name}</td>
-                    <td class="text-center">${item.score}%</td>
+                    <td class="text-center">${item.score}${isNaN(item.score) ? '' : '%'}</td>
                     <td class="text-center">
                         <span class="grade-pill ${cssClass}">
                             ${item.grade}
@@ -336,6 +392,20 @@
         } else {
             alert("No results found for admission number: " + input);
         }
+    }
+
+    function showGraduationPopup() {
+        const overlay = document.getElementById('gradOverlay');
+        const win = document.getElementById('gradWindow');
+        overlay.style.display = 'flex';
+        setTimeout(() => win.classList.add('active'), 10);
+    }
+
+    function closeGrad() {
+        const overlay = document.getElementById('gradOverlay');
+        const win = document.getElementById('gradWindow');
+        win.classList.remove('active');
+        setTimeout(() => overlay.style.display = 'none', 400);
     }
 
     function downloadPDF() {
