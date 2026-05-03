@@ -1,9 +1,26 @@
 {
-    "last_sync": "2026-05-03 16:24:43",
+    "last_sync": "2026-05-03 16:29:18",
     "frozen_students": [],
     "data": [
         {
             "adm_no": null,
+            "student_name": "",
+            "class_name": "Alumnae",
+            "exam_type": "FINAL",
+            "term": "GRADUATED",
+            "year": "1970",
+            "subjects": [
+                {
+                    "name": "STATUS",
+                    "score": "LEAVING CERTIFICATE READY AFTER THE FINAL EXAMINATIONS",
+                    "grade": "FINISHED JUNIOR SCHOOL"
+                }
+            ],
+            "total_score": 0,
+            "is_graduated": true
+        },
+        {
+            "adm_no": "RJA\/023\/2026",
             "student_name": "",
             "class_name": "Alumnae",
             "exam_type": "FINAL",
@@ -1491,73 +1508,6 @@
                 }
             ],
             "total_score": 501,
-            "is_frozen": false
-        },
-        {
-            "adm_no": "RJA\/023\/2026",
-            "student_name": "JANICE AJEMA",
-            "class_name": "Grade 9",
-            "exam_type": null,
-            "term": "Term 1",
-            "year": "2026",
-            "subjects": [
-                {
-                    "name": "Agriculture ",
-                    "score": 50,
-                    "grade": "ME2"
-                },
-                {
-                    "name": "CAS",
-                    "score": 32,
-                    "grade": "AE1"
-                },
-                {
-                    "name": "Computer Studies",
-                    "score": 40,
-                    "grade": "AE1"
-                },
-                {
-                    "name": "English",
-                    "score": 61,
-                    "grade": "ME1"
-                },
-                {
-                    "name": "French",
-                    "score": 43,
-                    "grade": "ME2"
-                },
-                {
-                    "name": "Kiswahili",
-                    "score": 23,
-                    "grade": "AE2"
-                },
-                {
-                    "name": "Mathematics",
-                    "score": 14,
-                    "grade": "BE1"
-                },
-                {
-                    "name": "Pre-Tech",
-                    "score": 54,
-                    "grade": "ME2"
-                },
-                {
-                    "name": "Religious Education",
-                    "score": 38,
-                    "grade": "AE1"
-                },
-                {
-                    "name": "Science & Technology",
-                    "score": 48,
-                    "grade": "ME2"
-                },
-                {
-                    "name": "Social Studies",
-                    "score": 43,
-                    "grade": "ME2"
-                }
-            ],
-            "total_score": 446,
             "is_frozen": false
         }
     ]
